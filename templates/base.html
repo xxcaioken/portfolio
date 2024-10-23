@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Portfolio{% endblock %}</title>
+    {% load bootstrap4 %}
+    {% bootstrap_css %}
+</head>
+<body>
+    <header>
+        <h1>My Portfolio Header</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">home</a></li>
+                <li><a href="{% url 'about' %}">About Me</a></li>
+                <li><a href="{% url 'crypto_prices' %}">Crypto Prices</a></li>
+                <li><a href="{% url 'feedback_suggestions' %}">Feedback & Suggestions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- content from htmls -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
+
+    {% bootstrap_javascript %}
+</body>
+</html>
