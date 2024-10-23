@@ -1,9 +1,26 @@
-
 {% extends 'base.html' %}
 
-{% block title %}Home - My Portfolio{% endblock %}
+{% block title %}Home - Portfolio Caio Kormives{% endblock %}
 
 {% block content %}
-<h2>Hello world</h2>
-<p> content.</p>
+<span> 
+    <div class="d-flex flex-column justify-content-center align-items-center p-3 my-3" style="background-color: #e5dac8; max-width: 95%; margin: auto; height: 90.5vh;" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://drive.google.com/thumbnail?id=1PEbqAIJlQ0fqyWIvpu09lMganxwwNrmw" alt="Tempo" style="max-width: 100%; height: auto;">
+        <div class="text-center mt-3"> <!-- Adicionei mt-3 para espaçamento entre a imagem e o texto -->
+            <h2 contenteditable="true" spellcheck="false">Olá, me chamo Caio!</h2>
+            <p contenteditable="true" spellcheck="false">Sou um Desenvolvedor Full Stack apaixonado por tecnologia e desenvolvimento de software desde a infância quando tive meu primeiro contato com desenvolvimento.</p>
+            <a href="{% url 'about' %}" style="
+            color: var(--default-color);
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 1px;
+            padding: 8px 40px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            transition: 0.3s;
+            border: 2px solid color-mix(in srgb, var(--default-color), transparent 50%);
+        ">Saber mais</a>
+        </div>
+    </div>
+</span>
 {% endblock %}

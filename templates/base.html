@@ -3,41 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}My Portfolio{% endblock %}</title>
+    <title>{% block title %}Caio Kormives Portfolio{% endblock %}</title>
     {% load bootstrap4 %}
     {% bootstrap_css %}
     {% load static %}
+    <style>
+     
+        html, body {
+            height: 100%; 
+            margin: 0; 
+            display: flex;
+            flex-direction: column;
+        }
+        
+        main {
+            flex: 1;
+            background-color: grey; 
+        }
+
+        footer {
+            border-top: 1px solid #333;
+            height: 40px;
+            position: relative;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
-     
-     
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="{% url 'home' %}">Caio Kormives</a>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #315355;">
+            <a class="navbar-brand text-light" href="{% url 'home' %}">Caio Kormives</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'home' %}">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'about' %}">About Me</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'crypto_prices' %}">Crypto Prices</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'feedback_suggestions' %}">Feedback & Suggestions</a>
-                </li>
-              </ul>
-              <span class="navbar-text">
-                Welcome to My Portfolio
-              </span>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{% url 'about' %}">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{% url 'crypto_prices' %}">Crypto Prices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{% url 'feedback_suggestions' %}">Feedback & Suggestions</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                    Welcome to My Portfolio
+                </span>
             </div>
-          </nav>
-          
+        </nav>
     </header>
 
     <main>
@@ -46,8 +64,8 @@
         {% endblock %}
     </main>
 
-    <footer>
-        <p>&copy; 2024 My Portfolio</p>
+    <footer style="background-color: #e5dac8;">
+        <p>&copy; 2024 </p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
