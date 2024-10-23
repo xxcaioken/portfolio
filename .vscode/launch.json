@@ -20,8 +20,8 @@
             "url": "http://127.0.0.1:8080",
             "webRoot": "${workspaceFolder}",
             "sourceMaps": true,
-            "runtimeExecutable": "/path/to/your/chrome",
-            "preLaunchTask": "Python: Django",
+            "runtimeExecutable": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+            "preLaunchTask": "Run Django Server",
             "postDebugTask": "closeChrome"
         }
     ]
