@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Django Server",
+            "type": "shell",
+            "command": "${workspaceFolder}/venv/Scripts/python",
+            "args": [
+                "${workspaceFolder}/manage.py",
+                "runserver",
+                "127.0.0.1:8080"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "isBackground": true,  // Mantém a tarefa rodando em background
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        }
+    ]
+}
