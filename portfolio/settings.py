@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
-ALLOWED_HOSTS = ["https://portfolio-u3ez.onrender.com", "localhost"]
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS")
 
 
 # Application definition
@@ -88,9 +88,7 @@ DATABASES = {
     }
 }
 
-DARABASE_URL = os.environ.get("DARABASE_URL")
-
-DATABASES['default'] = dj_database_url.parse(DARABASE_URL)
+DATABASES['default'] = dj_database_url.parse("postgresql://portfolio_ruo6_user:hgDg0asugnMm2LlGUSld1Zfxa27oP1Ew@dpg-csc5cng8fa8c73fpfpt0-a.oregon-postgres.render.com/portfolio_ruo6")
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
