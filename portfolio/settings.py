@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-g2=b0g+*wwp2orl@@hsq8*^gh%p&l7#y2_b+gc7xb&is4uq9!!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
-ALLOWED_HOSTS = ["https://portfolio-u3ez.onrender.com"]
+ALLOWED_HOSTS = ["https://portfolio-u3ez.onrender.com", "portfolio-u3ez.onrender.com"]
 
 
 # Application definition
