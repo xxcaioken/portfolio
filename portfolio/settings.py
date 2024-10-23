@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-g2=b0g+*wwp2orl@@hsq8*^gh%p&l7#y2_b+gc7xb&is4uq9!!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
+DEBUG = os.environ.get("DEBUG", "False").lower() in ("true", "1", "t")
 
-ALLOWED_HOSTS = ["https://portfolio-u3ez.onrender.com", "portfolio-u3ez.onrender.com"]
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "https://portfolio-u3ez.onrender.com", "portfolio-u3ez.onrender.com"]
 
 
 # Application definition
