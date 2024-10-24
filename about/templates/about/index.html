@@ -3,8 +3,17 @@
 {% block title %}
   About Me - Portfolio Caio Kormives
 {% endblock %}
+
 {% block style %}
-  .responsive-heading { font-family: serif; font-weight: bold; color: #008e72; font-size: 4.5vw; } @media (min-width: 2559px) { .responsive-heading { font-size: 3.5vw; } } @media (max-width: 1441px) { .responsive-heading { font-size: 6vw; } } @media (max-width: 1025px) { .responsive-heading { font-size: 7vw; } } @media (max-width: 900px) { .responsive-heading { font-size: 7.5vw; } }
+  .responsive-heading { font-family: serif; font-weight: bold; color: #008e72; font-size: 4.5vw; }
+
+  @media (min-width: 2559px) { .responsive-heading { font-size: 3.5vw; } }
+
+  @media (max-width: 1441px) { .responsive-heading { font-size: 6vw; } }
+
+  @media (max-width: 1025px) { .responsive-heading { font-size: 7vw; } }
+
+  @media (max-width: 900px) { .responsive-heading { font-size: 7.5vw; } }
 
   @media (max-width: 600px) { .responsive-heading { font-size: 10vw; } }
 
@@ -12,38 +21,44 @@
 {% endblock %}
 
 {% block content %}
-  <span>
-    {% comment %}flex-column{% endcomment %}
-    <div class="d-flex p-3 my-3" style="background-color: #e5dac8;max-width: 95%;margin: auto;height: auto;min-height: 90.5vh;" data-aos="fade-up" data-aos-delay="100">
-      <div style="width: min-content; " class="d-flex">
-        <div class="col-md-8 col-lg-7 p-4 shadow-sm bg-white rounded" style="color: #008e72; margin-right:2vh ;min-width:auto">
-          <div class="row">
-            <div class="col-8" style="z-index:1">
-              <h6 class="display-4" style="font-family:serif;color:#008e72">Caio</h6>
-              <h1 class="display-2 responsive-heading" style="font-family:serif;">KORMIVES</h1>
-            </div>
-            <div class="col-4">
-              <img src="https://drive.google.com/thumbnail?id=1PEbqAIJlQ0fqyWIvpu09lMganxwwNrmw" alt="Profile" class="img-fluid rounded" style="width:100%;height:auto" />
+  <div class="d-flex p-3 my-3" style="background-color: #e5dac8;max-width: 95%;margin: auto;height: auto;min-height: 90.5vh;" data-aos="fade-up" data-aos-delay="100">
+    <div class="p-3 my-3" style="background-color: #e5dac8;max-width: 95%;height: auto;min-height: 90.5vh; max-height: 91.5vh; color: #008e72;" data-aos="fade-up" data-aos-delay="100">
+      <div class="d-flex mb-4;">
+        <div style="max-width: 110vh; min-height: 75vh; margin-right: 7vh;" class="col-md-9 col-lg-8">
+          <div class="p-3 bg-light rounded mb-3">
+            <div class="row">
+              <div class="col-8">
+                <h6 class="display-4" style="font-family: serif;color: #008e72;">Caio</h6>
+                <h1 class="display-2 responsive-heading" style="font-family: serif;">KORMIVES</h1>
+
+                <h4 style="font-weight: bold;">Desenvolvedor full stack</h4>
+                <p class="text-justify">Sou um Desenvolvedor Full Stack apaixonado por tecnologia e desenvolvimento de software desde a infância. Concluí meu curso de Análise e Desenvolvimento de Sistemas e tenho experiência em tecnologias como React.js e .NET, trabalhando em um ambiente ágil e colaborando com equipes multidisciplinares. Além disso, minha experiência me permitiu expandir minha fluência em inglês e ampliar minha perspectiva sobre a aplicação da tecnologia em diferentes contextos culturais. Estou sempre em busca de novos desafios e oportunidades para crescer como desenvolvedor, buscando cursos capacitadores e explorando novas tecnologias e metodologias.</p>
+              </div>
+              <div class="col-3">
+                <img src="https://drive.google.com/thumbnail?id=1PEbqAIJlQ0fqyWIvpu09lMganxwwNrmw" alt="Profile" class="img-fluid rounded" style="width: 100%; height: auto; max-width: 30vh;max-height: 30vh;" />
+              </div>
             </div>
           </div>
-          <h4 class="mt-3" style="font-weight:bold">Desenvolvedor full stack</h4>
-          <p class="text-justify">Sou um Desenvolvedor Full Stack apaixonado por tecnologia e desenvolvimento de software desde a infância. Concluí meu curso de Análise e Desenvolvimento de Sistemas e tenho experiência em tecnologias como React.js e .NET, trabalhando em um ambiente ágil e colaborando com equipes multidisciplinares. Além disso, minha experiência me permitiu expandir minha fluência em inglês e ampliar minha perspectiva sobre a aplicação da tecnologia em diferentes contextos culturais. Estou sempre em busca de novos desafios e oportunidades para crescer como desenvolvedor, buscando cursos capacitadores e explorando novas tecnologias e metodologias.</p>
-          <hr class="my-3" style="background: #008e72;" />
-          <div class="text-center mb-3">
-            <p>
-              <span>LinkedIn.com/in/caio-kormives</span>&nbsp;&nbsp;&nbsp;
-              <span>48 9 9845-9412</span>&nbsp;&nbsp;&nbsp;
-              <span>cwkormives@gmail.com</span>
-            </p>
-            <p>
-              <span>20/05/2003</span>&nbsp;&nbsp;&nbsp;
-              <span>Florianópolis, SC, Brasil</span>
-            </p>
+
+          <div class="p-3 bg-light rounded mt-3 mb-4">
+            <hr class="my-3" style="background: #008e72;" />
+            <div class="text-center mb-3">
+              <p>
+                <span>LinkedIn.com/in/caio-kormives</span>&nbsp;&nbsp;&nbsp;
+                <span>48 9 9845-9412</span>&nbsp;&nbsp;&nbsp;
+                <span>cwkormives@gmail.com</span>
+              </p>
+              <p>
+                <span>20/05/2003</span>&nbsp;&nbsp;&nbsp;
+                <span>Florianópolis, SC, Brasil</span>
+              </p>
+            </div>
+            <hr class="my-3" style="background: #008e72;" />
           </div>
-          <hr class="my-3" style="background: #008e72;" />
-          <div class="row mt-4">
+
+          <div class="row mt-3">
             <div class="col-md-6">
-              <div class="p-3 bg-light rounded">
+              <div class="p-3 bg-light rounded mb-3">
                 <h5 class="font-weight-bold">Idiomas</h5>
                 <ul class="list-unstyled">
                   <li>
@@ -53,7 +68,7 @@
               </div>
             </div>
             <div class="col-md-6">
-              <div class="p-3 bg-light rounded">
+              <div class="p-3 bg-light rounded mb-3">
                 <h5 class="font-weight-bold">Habilidades</h5>
                 <div class="skills-list">
                   <span class="skill-badge">Docker</span>
@@ -73,65 +88,32 @@
             </div>
           </div>
         </div>
-        <div class="col-md-8 col-lg-7 p-4 shadow-sm bg-white rounded" style="color: #008e72">
-          <div class="row">
-            <div class="col-8" style="z-index:1">
-              <h6 class="display-4" style="font-family:serif;color:#008e72">Caio</h6>
-              <h1 class="display-2 responsive-heading" style="font-family:serif;">KORMIVES</h1>
-            </div>
-            <div class="col-4">
-              <img src="https://drive.google.com/thumbnail?id=1PEbqAIJlQ0fqyWIvpu09lMganxwwNrmw" alt="Profile" class="img-fluid rounded" style="width:100%;height:auto" />
-            </div>
-          </div>
-          <h4 class="mt-3" style="font-weight:bold">Desenvolvedor full stack</h4>
-          <p class="text-justify">Sou um Desenvolvedor Full Stack apaixonado por tecnologia e desenvolvimento de software desde a infância. Concluí meu curso de Análise e Desenvolvimento de Sistemas e tenho experiência em tecnologias como React.js e .NET, trabalhando em um ambiente ágil e colaborando com equipes multidisciplinares. Além disso, minha experiência me permitiu expandir minha fluência em inglês e ampliar minha perspectiva sobre a aplicação da tecnologia em diferentes contextos culturais. Estou sempre em busca de novos desafios e oportunidades para crescer como desenvolvedor, buscando cursos capacitadores e explorando novas tecnologias e metodologias.</p>
+
+        <div class="col-md-8 col-lg-7 shadow-sm bg-white rounded" style="color: #008e72;max-width: 55vh;min-height: 75vh;max-width: 70vh;min-width: 65vh">
+          <h4 class="mt-3" style="font-weight: bold;">Experiência Profissional</h4>
+          <p>
+            <strong>Tech6 Group Ltda</strong>
+          </p>
+          <p>
+            <strong>Desenvolvedor Full Stack Junior</strong> - (Abr 2022 - Jul 2024)
+          </p>
+          <p>
+            Como Desenvolvedor Full Stack Junior, fui responsável pelo desenvolvimento e manutenção de uma aplicação web utilizando <strong>React.js</strong> e <strong>.NET</strong>. Implementei novos recursos e melhorias de performance no frontend e backend, além de integrar APIs de terceiros para expandir a funcionalidade dos sistemas. Colaborei com equipes multidisciplinares para o planejamento e implementação de novos projetos.
+          </p>
           <hr class="my-3" style="background: #008e72;" />
-          <div class="text-center mb-3">
-            <p>
-              <span>LinkedIn.com/in/caio-kormives</span>&nbsp;&nbsp;&nbsp;
-              <span>48 9 9845-9412</span>&nbsp;&nbsp;&nbsp;
-              <span>cwkormives@gmail.com</span>
-            </p>
-            <p>
-              <span>20/05/2003</span>&nbsp;&nbsp;&nbsp;
-              <span>Florianópolis, SC, Brasil</span>
-            </p>
-          </div>
+
+          <h4 class="mt-3" style="font-weight: bold;">Formação</h4>
+          <p>
+            <strong>Técnico em Desenvolvimento de Sistemas</strong>
+          </p>
+          <p>Senai - (Jan 2019 - Dez 2022)</p>
+          <p>
+            <strong>Análise e Desenvolvimento de Sistemas</strong>
+          </p>
+          <p>Senai - (Jan 2022 - Atualmente)</p>
           <hr class="my-3" style="background: #008e72;" />
-          <div class="row mt-4">
-            <div class="col-md-6">
-              <div class="p-3 bg-light rounded">
-                <h5 class="font-weight-bold">Idiomas</h5>
-                <ul class="list-unstyled">
-                  <li>
-                    <strong>Inglês</strong> B2 - Intermediário Superior
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="p-3 bg-light rounded">
-                <h5 class="font-weight-bold">Habilidades</h5>
-                <div class="skills-list">
-                  <span class="skill-badge">Docker</span>
-                  <span class="skill-badge">HTML5</span>
-                  <span class="skill-badge">CSS3</span>
-                  <span class="skill-badge">JavaScript</span>
-                  <span class="skill-badge">Java</span>
-                  <span class="skill-badge">Python</span>
-                  <span class="skill-badge">CI/CD</span>
-                  <span class="skill-badge">Visual Studio</span>
-                  <span class="skill-badge">Azure</span>
-                  <span class="skill-badge">PostgreSQL</span>
-                  <span class="skill-badge">React.js</span>
-                  <span class="skill-badge">ASP.NET</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <div />
       </div>
     </div>
-  </span>
+  </div>
 {% endblock %}
