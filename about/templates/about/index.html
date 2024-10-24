@@ -18,18 +18,20 @@
   @media (max-width: 600px) { .responsive-heading { font-size: 12vw; } }
 
   @media (max-width: 400px) { .responsive-heading { font-size: 12vw; } }
+
+ .section-title { border-left: 5px solid #008e72; padding-left: 10px; }
 {% endblock %}
 
 {% block content %}
-  <div class="d-flex p-3 my-3" style="background-color: #e5dac8;max-width: 95%;margin: auto;height: auto;min-height: 90.5vh;" data-aos="fade-up" data-aos-delay="100">
-    <div  style="background-color: #e5dac8;max-width: 95%;height: auto;min-height: 90.5vh; max-height: 91.5vh; color: #008e72;" data-aos="fade-up" data-aos-delay="100">
+  <div class="d-flex p-3 my-3" style="background-color: #e5dac8; max-width: 95%; margin: auto; height: auto; min-height: 90.5vh;" data-aos="fade-up" data-aos-delay="100">
+    <div style="background-color: #e5dac8; max-width: 95%; height: auto; min-height: 90.5vh; max-height: 91.5vh; color: #008e72;" data-aos="fade-up" data-aos-delay="100">
       <div class="d-flex mb-4;">
         <div style="max-width: 110vh; min-height: 75vh; margin-inline: 3vh;" class="col-md-9 col-lg-8">
-          <div class="p-2 bg-light rounded ">
-            <div class="row" style="justify-content:space-around;align-items:center">
+          <div class="p-2 bg-light rounded">
+            <div class="row" style="justify-content: space-around; align-items: center">
               <div class="col-8">
-                <h6 class="display-4" style="font-family: serif;color: #008e72;">Caio</h6>
-                <h1 class="display-2 responsive-heading" style="position: relative;font-family: serif;z-index: 1;">KORMIVES</h1>
+                <h6 class="display-4" style="font-family: serif; color: #008e72;">Caio</h6>
+                <h1 class="display-2 responsive-heading" style="position: relative; font-family: serif; z-index: 1;">KORMIVES</h1>
 
                 <h4 style="font-weight: bold;">Desenvolvedor full stack</h4>
                 <p class="text-justify">Sou um Desenvolvedor Full Stack apaixonado por tecnologia e desenvolvimento de software desde a infância. Concluí meu curso de Análise e Desenvolvimento de Sistemas e tenho experiência em tecnologias como React.js e .NET, trabalhando em um ambiente ágil e colaborando com equipes multidisciplinares. Além disso, minha experiência me permitiu expandir minha fluência em inglês e ampliar minha perspectiva sobre a aplicação da tecnologia em diferentes contextos culturais. Estou sempre em busca de novos desafios e oportunidades para crescer como desenvolvedor, buscando cursos capacitadores e explorando novas tecnologias e metodologias.</p>
@@ -67,9 +69,7 @@
               </div>
             </div>
             <div class="col-md-8 d-flex">
-              <div class="bg-light rounded flex-fill" style="
-    padding: 1rem 0 0 1rem;
-">
+              <div class="bg-light rounded flex-fill" style="padding: 1rem 0 0 1rem;">
                 <div class="col-1101">
                   <h5 class="font-weight-bold">Habilidades</h5>
                   <ul>
@@ -83,28 +83,33 @@
           </div>
         </div>
 
-        <div class="col-md-8 col-lg-7 shadow-sm bg-white rounded" style="color: #008e72;max-width: 55vh;min-height: 75vh;max-width: 70vh;min-width: 65vh">
-          <div class="row mt-3" style="justify-content:space-around">
-            <!-- Experiência Profissional -->
-              <div class="p-2 bg-light rounded">
-                <h4 class="font-weight-bold" style="border-left: 5px solid #008e72; padding-left: 10px;">Experiência Profissional</h4>
-                <p><strong>Tech6 Group Ltda</strong></p>
-                <p><strong>Desenvolvedor Full Stack Junior</strong> - (Abr 2022 - Jul 2024)</p>
-                <p>
-                  Como Desenvolvedor Full Stack Junior, fui responsável pelo desenvolvimento e manutenção de uma aplicação web utilizando <strong>React.js</strong> e <strong>.NET</strong>.
-                  Implementei novos recursos e melhorias de performance no frontend e backend, além de integrar APIs de terceiros para expandir a funcionalidade dos sistemas.
-                </p>
+        <div style="max-width: 110vh; min-height: 75vh; margin-inline: 3vh;" class="col-md-9 col-lg-8">
+          <div class="col-md-6 col-sm-12 mb-4">
+            <div class="p-3 bg-light rounded">
+              <h4 class="font-weight-bold section-title">Experiência Profissional</h4>
+              <p>
+                <strong>Tech6 Group Ltda</strong>
+              </p>
+              <p>
+                <strong>Desenvolvedor Full Stack Junior</strong> - (Abr 2022 - Jul 2024)
+              </p>
+              <p>
+                Como Desenvolvedor Full Stack Junior, fui responsável pelo desenvolvimento e manutenção de uma aplicação web utilizando <strong>React.js</strong> e <strong>.NET</strong>. Implementei novos recursos e melhorias de performance no frontend e backend, além de integrar APIs de terceiros para expandir a funcionalidade dos sistemas.
+              </p>
             </div>
-            <div class="row mt-3" style=" justify-content: start; ">
-          
-            <!-- Formação -->
-              <div class="p-2 bg-light rounded">
-                <h4 class="font-weight-bold" style="border-left: 5px solid #008e72; padding-left: 10px;">Formação</h4>
-                <p><strong>Técnico em Desenvolvimento de Sistemas</strong></p>
-                <p>Senai - (Jan 2019 - Dez 2022)</p>
-                <p><strong>Análise e Desenvolvimento de Sistemas</strong></p>
-                <p>Senai - (Jan 2022 - Atualmente)</p>
-              </div>
+          </div>
+
+          <div class="col-md-6 col-sm-12 mb-4">
+            <div class="p-3 bg-light rounded">
+              <h4 class="font-weight-bold section-title">Formação</h4>
+              <p>
+                <strong>Técnico em Desenvolvimento de Sistemas</strong>
+              </p>
+              <p>Senai - (Jan 2019 - Dez 2022)</p>
+              <p>
+                <strong>Análise e Desenvolvimento de Sistemas</strong>
+              </p>
+              <p>Senai - (Jan 2022 - Atualmente)</p>
             </div>
           </div>
         </div>
