@@ -1,11 +1,119 @@
 {% extends 'base.html' %}
 
-{% block title %}About Me - Portfolio Caio Kormives{% endblock %}
+{% block title %}
+  About Me - Portfolio Caio Kormives
+{% endblock %}
+
+{% block style %}
+  .responsive-heading { font-family: serif; font-weight: bold; font-size: 7vw; }
+
+  @media (min-width: 2559px) { .responsive-heading { font-size: 6vw; } }
+
+  @media (max-width: 1441px) { .responsive-heading { font-size: 8.5vw; } }
+
+  @media (max-width: 1025px) { .responsive-heading { font-size: 9.5vw; } }
+
+  @media (max-width: 900px) { .responsive-heading { font-size: 10vw; } }
+
+  @media (max-width: 600px) { .responsive-heading { font-size: 12vw; } }
+
+  @media (max-width: 400px) { .responsive-heading { font-size: 12vw; } }
+
+  .section-title { border-left: 5px solid #008e72; padding-left: 10px; }
+{% endblock %}
 
 {% block content %}
-    <span> 
-        <div class="d-flex flex-column justify-content-center align-items-center p-3 my-3" style="background-color: #e5dac8; max-width: 95%; margin: auto; height: 90.5vh;" data-aos="fade-up" data-aos-delay="100">    
-           <h1> About me</h1>
+  <div class="p-3 my-3 d-flex flex-wrap justify-content-center" style="background-color: #e5dac8; max-width: 95%; margin: auto; height: auto; min-height: 90.5vh;  color: #008e72;" data-aos="fade-up" data-aos-delay="100">
+    <div class="d-flex flex-wrap" data-aos="fade-up" data-aos-delay="100" style="max-width: inherit;">
+        <div style="max-width: 110vh; min-height: 75vh;" class="col-md-9 col-lg-8">
+          <div class="p-2 bg-light rounded">
+            <div class="row" style="justify-content: space-around; align-items: center">
+              <div class="col-8">
+                <h6 class="display-4" style="font-family: serif;">Caio</h6>
+                <h1 class="display-2 responsive-heading" style="position: relative; font-family: serif; z-index: 1;">KORMIVES</h1>
+
+                <h4 style="font-weight: bold;">Desenvolvedor full stack</h4>
+                <p class="text-justify">Sou um Desenvolvedor Full Stack apaixonado por tecnologia e desenvolvimento de software desde a infância. Concluí meu curso de Análise e Desenvolvimento de Sistemas e tenho experiência em tecnologias como React.js e .NET, trabalhando em um ambiente ágil e colaborando com equipes multidisciplinares. Além disso, minha experiência me permitiu expandir minha fluência em inglês e ampliar minha perspectiva sobre a aplicação da tecnologia em diferentes contextos culturais. Estou sempre em busca de novos desafios e oportunidades para crescer como desenvolvedor, buscando cursos capacitadores e explorando novas tecnologias e metodologias.</p>
+              </div>
+              <div class="col-3" style="height: 100%; display: flex; align-items: center;">
+                <img src="https://drive.google.com/thumbnail?id=1PEbqAIJlQ0fqyWIvpu09lMganxwwNrmw" alt="Profile" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;" />
+              </div>
+            </div>
+          </div>
+
+          <div class="p-2 bg-light rounded mt-3 mb-4">
+            <hr class="my-3" style="background: #008e72;" />
+            <div class="text-center mb-3">
+              <p>
+                <span>LinkedIn.com/in/caio-kormives</span>&nbsp;&nbsp;&nbsp;
+                <span>48 9 9845-9412</span>&nbsp;&nbsp;&nbsp;
+                <span>cwkormives@gmail.com</span>
+              </p>
+              <p>
+                <span>20/05/2003</span>&nbsp;&nbsp;&nbsp;
+                <span>Florianópolis, SC, Brasil</span>
+              </p>
+            </div>
+            <hr class="my-3" style="background: #008e72;" />
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-md-6 col-sm-12 mb-4 d-flex">
+              <div class="p-3 bg-light rounded flex-fill">
+                <h5 class="font-weight-bold">Idiomas</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <strong>Inglês</strong> B2 - Intermediário Superior
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 mb-4 d-flex">
+              <div class="bg-light rounded flex-fill" style="padding: 1rem 0 0 1rem;">
+                <h5 class="font-weight-bold">Habilidades</h5>
+                <ul>
+                  <li>.NET/C#, REACT, JS/TS, Python</li>
+                  <li>JAVA, C, HTML5, CSS3, PostgreSQL, MySQL </li>
+                  <li>VS, VSCODE, Azure, AWS, Dbeaver, SSMS, CI/CD, Docker</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-    </span>
+
+        <div style="max-width: 66vh; min-height: 75vh; margin-inline: 3vh;" class="col-md-9 col-lg-8 rounded">
+          <div class="row" style="min-height:30vh">
+            <div class="p-3 bg-light">
+              <h4 class="font-weight-bold section-title" style=" margin-top: 1rem;">Experiência Profissional</h4>
+              <p>
+                <strong>Tech6 Group Ltda</strong>
+              </p>
+              <p>
+                <strong>Desenvolvedor Full Stack Junior</strong> - (Abr 2022 - Jul 2024)
+              </p>
+              <p>
+                Como Desenvolvedor Full Stack Junior, fui responsável pelo desenvolvimento e manutenção de uma aplicação web utilizando <strong>React.js</strong> e <strong>.NET</strong>. Implementei novos recursos e melhorias de performance no frontend e backend, além de integrar APIs de terceiros para expandir a funcionalidade dos sistemas.
+              </p>
+            </div>
+          </div>
+
+          <div class="row" style="min-height:40vh">
+            <div class="p-3 bg-light rounded" style="min-width: -webkit-fill-available;">
+              <h4 class="font-weight-bold section-title">Formação</h4>
+              <p>
+                <strong>Técnico em Desenvolvimento de Sistemas</strong>
+              </p>
+              <p>SENAI - (Jan 2019 - Dez 2021)</p>
+              <p>O curso técnico em Desenvolvimento de Sistemas, integrado ao ensino médio, foi crucial para minha carreira como desenvolvedor. Ele me proporcionou conhecimentos práticos em programação e análise de sistemas, além de habilidades essenciais como trabalho em equipe e resolução de problemas, preparando-me para os desafios do mercado de trabalho.</p>
+              <p>
+                <strong>Análise e Desenvolvimento de Sistemas</strong>
+              </p>
+              <p>SENAI - (Jan 2022 - Atualmente)</p>
+              <p>O curso oferece um aprofundamento em conceitos avançados de programação, arquitetura de software e análise de requisitos, permitindo desenvolver soluções mais robustas e eficientes. A formação também enriqueceu meus conhecimentos em novas tecnologias e metodologias, incluindo desenvolvimento ágil e práticas de DevOps. A abordagem prática do curso, com projetos e estudos de caso, fortalece minhas habilidades em resolver problemas reais e trabalhar em equipe, mantendo-me atualizado sobre as tendências do mercado e as novas tecnologias.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
