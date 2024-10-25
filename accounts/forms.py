@@ -7,9 +7,14 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
         
 class EmailAuthenticationForm(forms.Form):
-    email = forms.EmailField(label='Email', max_length=254)
-    password = forms.CharField(label='Password', widget=forms.PasswordInput)
-
+    email = forms.EmailField(
+        label='Email',
+        widget=forms.EmailInput(attrs={'class': 'form-control'})
+    )
+    password = forms.CharField(
+        label='Password',
+        widget=forms.PasswordInput(attrs={'class': 'form-control'})
+    )
     def __init__(self, request=None, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.request = request
@@ -35,6 +40,23 @@ class EmailAuthenticationForm(forms.Form):
     
     
 class CustomUserCreationForm(UserCreationForm):
+    username = forms.CharField(
+        label='Username',
+        widget=forms.TextInput(attrs={'class': 'form-control'})
+    )
+    email = forms.EmailField(
+        label='Email',
+        widget=forms.EmailInput(attrs={'class': 'form-control'})
+    )
+    password1 = forms.CharField(
+        label='Password',
+        widget=forms.PasswordInput(attrs={'class': 'form-control'})
+    )
+    password2 = forms.CharField(
+        label='Confirm Password',
+        widget=forms.PasswordInput(attrs={'class': 'form-control'})
+    )
+
     class Meta:
         model = User
-        fields = ('email', 'password1', 'password2')
+        fields = ['username', 'email', 'password1', 'password2']

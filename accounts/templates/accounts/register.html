@@ -1,15 +1,47 @@
 {% extends 'base.html' %}
 
-{% block title %}Login - Portfolio Caio Kormives{% endblock %}
+{% block title %}Registrar - Portfolio Caio Kormives{% endblock %}
 
 {% block content %}
-<span> 
-    <div class="d-flex flex-column justify-content-center align-items-center p-3 my-3" style="background-color: #e5dac8; max-width: 95%; margin: auto; height: 90.5vh;" data-aos="fade-up" data-aos-delay="100">
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Register</button>
-        </form>
+<div class="d-flex flex-column justify-content-center align-items-center p-3 my-3" style="background-color: #e5dac8; max-width: 95%; margin: auto; height: 90.5vh;   color: #008e72;" data-aos="fade-up" data-aos-delay="100">
+    <div class="card shadow" style="max-width: 400px; width: 100%;">
+        <div class="card-header text-center">
+            <h3>Criar Conta</h3>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                
+                <div class="mb-3">
+                    {{ form.username.label_tag }} 
+                    {{ form.username }} 
+                </div>
+
+                <div class="mb-3">
+                    {{ form.email.label_tag }} 
+                    {{ form.email }}  
+                </div>
+
+                <div class="mb-3">
+                    {{ form.password1.label_tag }} 
+                    {{ form.password1 }}  
+                </div>
+                <div class="mb-3">
+                    {{ form.password2.label_tag }} 
+                    {{ form.password2 }}  
+                </div>
+                    
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn mt-3"  style="  background-color: white;color:#008e72; border:1px solid #008e72">Registrar</button>
+                </div>
+            </form>
+            {% if form.non_field_errors %}
+                <div class="alert alert-danger mt-3">{{ form.non_field_errors }}</div>
+            {% endif %}
+            <div class="text-center mt-4">
+                <a href="{% url 'login' %}" style="color: #008e72;">Já possui uma conta? Faça login.</a>
+            </div>
+        </div>
     </div>
-</span>
+</div>
 {% endblock %}
