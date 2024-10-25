@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Login - Portfolio Caio Kormives{% endblock %}
+
+{% block content %}
+<span> 
+    <div class="d-flex flex-column justify-content-center align-items-center p-3 my-3" style="background-color: #e5dac8; max-width: 95%; margin: auto; height: 90.5vh;" data-aos="fade-up" data-aos-delay="100">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</span>
+{% endblock %}
