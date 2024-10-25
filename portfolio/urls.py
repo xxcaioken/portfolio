@@ -23,4 +23,5 @@ urlpatterns = [
     path('about/', include('about.urls')),
     path('crypto/', include('crypto_prices.urls')),
     path('feedback/', include('feedback_suggestions.urls')),
+    path('accounts/', include('accounts.urls')),
   ]

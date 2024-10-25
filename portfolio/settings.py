@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
-import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -45,6 +44,7 @@ INSTALLED_APPS = [
     'about',
     'crypto_prices',
     'feedback_suggestions',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -83,13 +83,14 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'portfolio_ruo6',
+        'USER': 'portfolio_ruo6_user',
+        'PASSWORD': 'hgDg0asugnMm2LlGUSld1Zfxa27oP1Ew',
+        'HOST': 'dpg-csc5cng8fa8c73fpfpt0-a.oregon-postgres.render.com',
+        'PORT': '5432',
     }
 }
-
-DATABASES['default'] = dj_database_url.parse("postgresql://portfolio_ruo6_user:hgDg0asugnMm2LlGUSld1Zfxa27oP1Ew@dpg-csc5cng8fa8c73fpfpt0-a.oregon-postgres.render.com/portfolio_ruo6")
-
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
@@ -134,3 +135,9 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = '/'
+
+LOGOUT_REDIRECT_URL = '/accounts/login/'
+
+AUTHENTICATION_BACKENDS = ['accounts.backends.EmailBackend', 'django.contrib.auth.backends.ModelBackend']
