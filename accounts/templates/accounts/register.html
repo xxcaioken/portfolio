@@ -30,7 +30,16 @@
                     {{ form.password2.label_tag }} 
                     {{ form.password2 }}  
                 </div>
-                    
+                
+                <div class="form-text " style="font-size: 0.9em;">
+                    <ul>
+                        <li>A senha deve ter pelo menos 8 caracteres.</li>
+                        <li>Deve conter letras maiúsculas e minúsculas.</li>
+                        <li>Deve conter pelo menos um número.</li>
+                        <li>Deve conter ao menos um caractere especial (por exemplo, @, #, $).</li>
+                    </ul>
+                </div>
+
                 <div class="d-flex justify-content-center">
                     <button type="submit" class="btn mt-3"  style="  background-color: white;color:#008e72; border:1px solid #008e72">Registrar</button>
                 </div>
