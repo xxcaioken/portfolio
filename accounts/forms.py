@@ -1,33 +1,40 @@
+# accounts/forms.py
+
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 
-from django import forms
-from django.contrib.auth.models import User
-from django.contrib.auth.forms import AuthenticationForm
+User = get_user_model()
+        
+class EmailAuthenticationForm(forms.Form):
+    email = forms.EmailField(label='Email', max_length=254)
+    password = forms.CharField(label='Password', widget=forms.PasswordInput)
 
-class EmailAuthenticationForm(AuthenticationForm):
-    email = forms.EmailField(label="Email", required=True)
+    def __init__(self, request=None, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.request = request
 
     def clean(self):
-        email = self.cleaned_data.get('email')
-        password = self.cleaned_data.get('password')
+        cleaned_data = super().clean()
+        email = cleaned_data.get('email')
+        password = cleaned_data.get('password')
 
         try:
             user = User.objects.get(email=email)
+            if not user.check_password(password):
+                raise forms.ValidationError("Credenciais inválidas.")
         except User.DoesNotExist:
-            raise forms.ValidationError("This email is not registered.")
-        
-        if not user.check_password(password):
-            raise forms.ValidationError("Incorrect password.")
-        
-        self.confirm_login_allowed(user)
-        return self.cleaned_data
+            raise forms.ValidationError("Credenciais inválidas.")
 
+        self.user_cache = user
+        return cleaned_data
 
+    def get_user(self):
+        return self.user_cache
+    
+    
+    
 class CustomUserCreationForm(UserCreationForm):
-    email = forms.EmailField(required=True)
-
     class Meta:
         model = User
-        fields = ['username', 'email', 'password1', 'password2']
+        fields = ('email', 'password1', 'password2')

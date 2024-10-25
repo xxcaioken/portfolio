@@ -5,15 +5,16 @@
 {% block content %}
 <span> 
     <div class="d-flex flex-column justify-content-center align-items-center p-3 my-3" style="background-color: #e5dac8; max-width: 95%; margin: auto; height: 90.5vh;" data-aos="fade-up" data-aos-delay="100">
-        <form method="post">
-            {% csrf_token %}
-            {{ form.email.label_tag }} <!-- Label para o campo de email -->
-            {{ form.email }} <!-- Campo de email -->
-            {{ form.password.label_tag }} <!-- Label para o campo de senha -->
-            {{ form.password }} <!-- Campo de senha -->
-            <button type="submit">Login</button>
-            <a href="{% url 'register' %}">Create an Account</a>
-        </form>
+<form method="post">
+        {% csrf_token %}
+        {{ form.email.label_tag }} {{ form.email }}<br>
+        {{ form.password.label_tag }} {{ form.password }}<br>
+        <button type="submit">Entrar</button>
+    </form>
+    {% if form.non_field_errors %}
+        <div class="error">{{ form.non_field_errors }}</div>
+    {% endif %}
+        <a href="{% url 'register' %}">Create an Account</a>
     </div>
 </span>
 {% endblock %}
