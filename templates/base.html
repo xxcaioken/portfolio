@@ -60,30 +60,18 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="{% url 'home' %}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="{% url 'about' %}">About Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="{% url 'crypto_prices' %}">Crypto Prices</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="{% url 'feedback_suggestions' %}">Feedback & Suggestions</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link text-light" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="{% url 'about' %}">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="{% url 'crypto_prices' %}">Crypto Prices</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="{% url 'feedback_suggestions' %}">Feedback & Suggestions</a></li>
                 </ul>
-                <span class="navbar-text">
-                    Welcome to My Portfolio
-                </span>
+                <span class="navbar-text">Welcome to My Portfolio</span>
             </div>
         </nav>
     </header>
 
     <main>
-        {% block content %}
-        <!-- content from htmls -->
-        {% endblock %}
+        {% block content %} {% endblock %}
     </main>
 
     <footer style="background-color: #e5dac8;">
@@ -92,5 +80,8 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     {% bootstrap_javascript %}
+
+    {% block scripts %}
+    {% endblock %}
 </body>
 </html>
