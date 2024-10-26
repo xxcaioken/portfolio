@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-g2=b0g+*wwp2orl@@hsq8*^gh%p&l7#y2_b+gc7xb&is4uq9!!'
-DEBUG = os.environ.get("DEBUG", "False").lower() in ("true", "1", "t")
+DEBUG = True
 ALLOWED_HOSTS = ["127.0.0.1", "localhost", "https://portfolio-u3ez.onrender.com", "portfolio-u3ez.onrender.com"]
 
 INSTALLED_APPS = [
