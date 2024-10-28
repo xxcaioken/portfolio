@@ -31,11 +31,16 @@ class RegisterView(CreateView):
         user = form.save()
         
         if(user):
-            LinkedInProfile.objects.create(user=user) 
+            linkedin_profile, created = LinkedInProfile.objects.get_or_create(user=user)
+
+            if created:
+                linkedin_profile.linkedin_url = form.POST.get('linkedin_url')
+                linkedin_profile.save()
+            else:
+                linkedin_profile.linkedin_url = form.POST.get('linkedin_url')
+                linkedin_profile.save()
         
-        print("Formulário de registro válido! Dados:", form.cleaned_data)
         return super().form_valid(form)
 
     def form_invalid(self, form):
-        print("Formulário de registro inválido! Erros:", form.errors)
         return super().form_invalid(form)

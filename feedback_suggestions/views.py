@@ -3,6 +3,8 @@ from .models import Feedback
 from .forms import FeedbackForm
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
+from django.urls import reverse_lazy
+
 
 def feedback(request):
     screen_width = int(request.GET.get('screen_width', 0))
@@ -29,10 +31,15 @@ def feedback(request):
 
 @login_required
 def create_feedback(request):
+    success_url = reverse_lazy('feedback')
+
     if request.method == 'POST':
         form = FeedbackForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('feedback_suggestions')
-
-    return redirect('feedback_suggestions')
+            feedback = form.save(commit=False)
+            feedback.user = request.user
+            feedback.save()
+    else:
+        form = FeedbackForm() 
+        
+    return render(request, 'feedback_suggestions/create_feedback.html', {'form': form})

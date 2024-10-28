@@ -56,8 +56,7 @@ class CustomUserCreationForm(UserCreationForm):
     )
     linkedin_url = forms.URLField(
         label='LinkedIn Profile URL',
-        widget=forms.URLInput(attrs={'class': 'form-control'}),
-        required=False 
+        widget=forms.URLInput(attrs={'class': 'form-control'})
     )
 
     class Meta:
