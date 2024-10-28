@@ -1,6 +1,7 @@
 from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
+from .models import LinkedInProfile 
 from .forms import CustomUserCreationForm, EmailAuthenticationForm
 from django.contrib.auth import login
 
@@ -27,6 +28,11 @@ class RegisterView(CreateView):
     success_url = reverse_lazy('login')
 
     def form_valid(self, form):
+        user = form.save()
+        
+        if(user):
+            LinkedInProfile.objects.create(user=user) 
+        
         print("Formulário de registro válido! Dados:", form.cleaned_data)
         return super().form_valid(form)
 

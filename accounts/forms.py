@@ -38,7 +38,7 @@ class EmailAuthenticationForm(forms.Form):
         return self.user_cache
     
     
-    
+
 class CustomUserCreationForm(UserCreationForm):
     username = forms.CharField(
         label='Username',
@@ -56,7 +56,18 @@ class CustomUserCreationForm(UserCreationForm):
         label='Confirm Password',
         widget=forms.PasswordInput(attrs={'class': 'form-control'})
     )
+    linkedin_url = forms.URLField(
+        label='LinkedIn Profile URL',
+        widget=forms.URLInput(attrs={'class': 'form-control'}),
+        required=False 
+    )
 
     class Meta:
         model = User
-        fields = ['username', 'email', 'password1', 'password2']
+        fields = ['username', 'email', 'password1', 'password2', 'linkedin_url']  
+
+    def clean_username(self):
+        username = self.cleaned_data.get('username')
+        if username:
+            username = username.replace(' ', '_')
+        return username
