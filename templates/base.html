@@ -66,7 +66,12 @@
                     <li class="nav-item"><a class="nav-link text-light" href="{% url 'crypto_prices' %}">Crypto Prices</a></li>
                     <li class="nav-item"><a class="nav-link text-light" href="{% url 'feedback_suggestions' %}">Feedback & Suggestions</a></li>
                 </ul>
+                {% if user.is_authenticated %}
+                
+                <li class=""><a class=" text-light" href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
                 <span class="navbar-text">Welcome to My Portfolio</span>
+                {% endif %}
             </div>
         </nav>
     </header>

@@ -4,6 +4,9 @@ from django.views.generic import CreateView
 from .models import LinkedInProfile 
 from .forms import CustomUserCreationForm, EmailAuthenticationForm
 from django.contrib.auth import login
+from django.contrib.auth import logout
+from django.shortcuts import redirect
+
 
 class CustomLoginView(LoginView):
     form_class = EmailAuthenticationForm
@@ -44,3 +47,7 @@ class RegisterView(CreateView):
 
     def form_invalid(self, form):
         return super().form_invalid(form)
+    
+def logout_view(request):
+    logout(request)
+    return redirect('home')
