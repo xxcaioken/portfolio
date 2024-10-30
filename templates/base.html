@@ -11,7 +11,7 @@
     {% load bootstrap4 %}
     {% bootstrap_css %}
     {% load static %}
-
+    
     <style>
       @import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
       
@@ -68,9 +68,16 @@
                 </ul>
                 {% if user.is_authenticated %}
                 
-                <li class=""><a class=" text-light" href="{% url 'logout' %}">Logout</a></li>
+                <li class="text-light" style="list-style: none; padding: 0; margin: 0;" id="username">    
+                Olá {{ user.username }}, Seja bem-vindo!
+                </li>
+                    <li  style="list-style: none; padding: 0; margin: 0;">&nbsp; | &nbsp;</li>
+                    <li class="" style="list-style: none; padding: 0; margin: 0;"><a class="text-light" href="{% url 'logout' %}">Logout</a></li>
+          
                 {% else %}
-                <span class="navbar-text">Welcome to My Portfolio</span>
+                    <li class="" style="list-style: none; padding: 0; margin: 0;"><a class="text-light" href="{% url 'login' %}">Login</a></li>
+                    <li  style="list-style: none; padding: 0; margin: 0;">&nbsp; | &nbsp;</li>
+                    <li class="" style="list-style: none; padding: 0; margin: 0;"><a class="text-light" href="{% url 'register' %}">Register</a></li>
                 {% endif %}
             </div>
         </nav>
@@ -89,7 +96,16 @@
 
     {% bootstrap_javascript %}
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("Script executado");
+            let username= document.getElementById("username").innerText
+            document.getElementById("username").innerText = username.replace(/_/g, " ");
+            console.log(document.getElementById("username").innerText)
+        });
+    </script>
     {% block scripts %}
     {% endblock %}
+    
 </body>
 </html>
