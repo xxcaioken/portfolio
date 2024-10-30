@@ -15,11 +15,15 @@ def feedback(request):
 
     feedbacks = Feedback.objects.select_related('user__linkedinprofile').all().order_by('-date')
     
-    maxPerPage = 3
-    if screen_width < 426:
+    maxPerPage = 4
+    if screen_width < 425:
         maxPerPage = 1
-    elif 426 <= screen_width < 1205:
+    elif 425 <= screen_width < 1440:
         maxPerPage = 2
+    elif 1440 <= screen_width < 2560 :
+        maxPerPage = 3
+    else:
+        maxPerPage = 4
 
     feedback_batches = [feedbacks[i:i + maxPerPage] for i in range(0, len(feedbacks), maxPerPage)]
     

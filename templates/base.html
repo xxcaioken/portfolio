@@ -1,94 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Portfolio Caio Kormives{% endblock %}</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %}
+        Portfolio Caio Kormives
+      {% endblock %}
+    </title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 
     {% load bootstrap4 %}
     {% bootstrap_css %}
     {% load static %}
-    
+    {% load i18n %}
+
     <style>
       @import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
       
       @import url(https://fonts.googleapis.com/css2?family=Lato&display=swap);
-     
-        html, body {
-            height: 100%; 
-            margin: 0; 
-            display: flex;
-            flex-direction: column;
-        }
-        
-        main {
-            flex: 1;
-            background-color: grey; 
-        }
-
-        footer {
-            height: 40px;
-            position: relative;
-            width: 100%;
-        }
-
-        body::-webkit-scrollbar-thumb {
-          background-color: white;   
-          border-radius: 20px;    
-          border: 3px solid white;
-        }
-
-        body::-webkit-scrollbar-track {
-          background: lightgrey;       
-        }
-        
-        body::-webkit-scrollbar {
-          width: 12px;               
-        }
-
-        {% block style %}  {% endblock %}
+      
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      main {
+        flex: 1;
+        background-color: grey;
+      }
+      
+      footer {
+        height: 40px;
+        position: relative;
+        width: 100%;
+      }
+      
+      body::-webkit-scrollbar-thumb {
+        background-color: white;
+        border-radius: 20px;
+        border: 3px solid white;
+      }
+      
+      body::-webkit-scrollbar-track {
+        background: lightgrey;
+      }
+      
+      body::-webkit-scrollbar {
+        width: 12px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #315355;">
-            <a class="navbar-brand text-light" href="{% url 'home' %}">Caio Kormives</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link text-light" href="{% url 'home' %}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="{% url 'about' %}">About Me</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="{% url 'crypto_prices' %}">Crypto Prices</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="{% url 'feedback_suggestions' %}">Feedback & Suggestions</a></li>
-                </ul>
-                {% if user.is_authenticated %}
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #315355;">
+        <a class="navbar-brand text-light" href="{% url 'home' %}">Caio Kormives</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="{% url 'about' %}">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="{% url 'crypto_prices' %}">Crypto Prices</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="{% url 'feedback_suggestions' %}">Feedback & Suggestions</a>
+            </li>
+          </ul>
+          <li style="list-style: none; padding: 0; margin: 0;" class="nav-item dropdown">
+            <a class="nav-link text-light dropdown-toggle" href="javascript:void(0);" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
+            <div class="dropdown-menu">
                 
-                <li class="text-light" style="list-style: none; padding: 0; margin: 0;" id="username">    
-                Olá {{ user.username }}, Seja bem-vindo!
-                </li>
-                    <li  style="list-style: none; padding: 0; margin: 0;">&nbsp; | &nbsp;</li>
-                    <li class="" style="list-style: none; padding: 0; margin: 0;"><a class="text-light" href="{% url 'logout' %}">Logout</a></li>
-          
-                {% else %}
-                    <li class="" style="list-style: none; padding: 0; margin: 0;"><a class="text-light" href="{% url 'login' %}">Login</a></li>
-                    <li  style="list-style: none; padding: 0; margin: 0;">&nbsp; | &nbsp;</li>
-                    <li class="" style="list-style: none; padding: 0; margin: 0;"><a class="text-light" href="{% url 'register' %}">Register</a></li>
-                {% endif %}
+                <a href="">
+
+                <form action="{% url 'set_language' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="language" value="en" />
+                    <button type="submit" class="dropdown-item">English</button>
+                </form>
+            </a>
+        <a>
+                <form action="{% url 'set_language' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="language" value="pt-br" />
+                    <button type="submit" class="dropdown-item">pt-br</button>
+                </form>
+            </a>
             </div>
-        </nav>
+        </li>
+          {% if user.is_authenticated %}
+            <li class="text-light" style="list-style: none; padding: 0; margin: 0;" id="username">Olá {{ user.username }}, Seja bem-vindo!</li>
+            <li style="list-style: none; padding: 0; margin: 0;">&nbsp; | &nbsp;</li>
+            <li class="" style="list-style: none; padding: 0; margin: 0;">
+              <a class="text-light" href="{% url 'logout' %}">Logout</a>
+            </li>
+          {% else %}
+            <li class="" style="list-style: none; padding: 0; margin: 0;">
+              <a class="text-light" href="{% url 'login' %}">Login</a>
+            </li>
+            <li style="list-style: none; padding: 0; margin: 0;">&nbsp; | &nbsp;</li>
+            <li class="" style="list-style: none; padding: 0; margin: 0;">
+              <a class="text-light" href="{% url 'register' %}">{% trans 'Register' %}</a>
+            </li>
+          {% endif %}
+        </div>
+      </nav>
     </header>
 
     <main>
-        {% block content %} {% endblock %}
+      {% block content %}
+
+      {% endblock %}
     </main>
 
     <footer style="background-color: #e5dac8;">
-        <p>&copy; 2024 </p>
+      <p>&copy; 2024</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -97,15 +132,19 @@
     {% bootstrap_javascript %}
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            console.log("Script executado");
-            let username= document.getElementById("username").innerText
-            document.getElementById("username").innerText = username.replace(/_/g, " ");
-            console.log(document.getElementById("username").innerText)
-        });
+      document.addEventListener('DOMContentLoaded', function () {
+        console.log('Script executado')
+        let usernameElement = document.getElementById('username')
+      
+        if (usernameElement) {
+          let username = usernameElement.innerText
+          usernameElement.innerText = username.replace(/_/g, ' ')
+          console.log(usernameElement.innerText)
+        }
+      })
     </script>
     {% block scripts %}
+
     {% endblock %}
-    
-</body>
+  </body>
 </html>

@@ -32,6 +32,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware'
 ]
 
 ROOT_URLCONF = 'portfolio.urls'
@@ -75,11 +76,22 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
+
 TIME_ZONE = 'UTC'
+
 USE_I18N = True
+
+USE_L10N = True
+
 USE_TZ = True
 
+LANGUAGES = (
+    ('pt-br', u'Portuguese (Brazilian)'),
+    ('en', u'English'),
+)
+
+LOCALE_PATHS = (os.path.join(BASE_DIR, 'locale/'), )
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
