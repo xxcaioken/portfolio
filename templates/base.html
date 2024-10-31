@@ -54,63 +54,76 @@
       body::-webkit-scrollbar {
         width: 12px;
       }
+      .bkgrnd {
+        background-color: #315355;
+      }
+      .lst-style {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
       {% block style %}  {% endblock %}
 
     </style>
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #315355;">
+      <nav class="navbar navbar-expand-lg navbar-light bkgrnd">
         <a class="navbar-brand text-light" href="{% url 'home' %}">Caio Kormives</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link text-light" href="{% url 'home' %}">Home</a>
+              <a class="nav-link text-light" href="{% url 'home' %}">{% trans 'home' %}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="{% url 'about' %}">About Me</a>
+              <a class="nav-link text-light" href="{% url 'about' %}">{% trans 'about' %}</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="{% url 'crypto_prices' %}">Crypto Prices</a>
+            <li class="nav-item dropdown lst-style">
+              <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans 'projects' %}</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" style="color: grey;" href="{% url 'crypto_prices' %}">{% trans 'crypto' %}</a>
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link text-light" href="{% url 'feedback_suggestions' %}">{% trans 'feedback_title' %}</a>
             </li>
           </ul>
-          <li style="list-style: none; padding: 0; margin: 0;" class="nav-item dropdown">
-            <a class="nav-link text-light dropdown-toggle" href="javascript:void(0);" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
-            <div class="dropdown-menu">
-                
-                <a href="">
-
+          <li class="nav-item dropdown lst-style">
+                <a class="nav-link text-light dropdown-toggle" href="javascript:void(0);" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans "language" %}</a>
+                <div class="dropdown-menu">
+                        <a href="#">
                 <form action="{% url 'set_language' %}" method="post">
-                    {% csrf_token %}
-                    <input type="hidden" name="language" value="en" />
-                    <button type="submit" class="dropdown-item">English</button>
+                  {% csrf_token %}
+                  <input type="hidden" name="language" value="en" />
+                  <button type="submit" class="dropdown-item">{% trans 'english' %}</button>
                 </form>
-            </a>
-        <a>
+              </a>
+              <a>
                 <form action="{% url 'set_language' %}" method="post">
-                    {% csrf_token %}
-                    <input type="hidden" name="language" value="pt-br" />
-                    <button type="submit" class="dropdown-item">pt-br</button>
+                  {% csrf_token %}
+                  <input type="hidden" name="language" value="pt-br" />
+                  <button type="submit" class="dropdown-item">{% trans 'pt-br' %}</button>
                 </form>
-            </a>
+              </a>
             </div>
-        </li>
+          </li>
+          <li  class="lst-style">| &nbsp;</li>
+
           {% if user.is_authenticated %}
-            <li class="text-light" style="list-style: none; padding: 0; margin: 0;" id="username">Olá {{ user.username }}, Seja bem-vindo!</li>
-            <li style="list-style: none; padding: 0; margin: 0;">&nbsp; | &nbsp;</li>
-            <li class="" style="list-style: none; padding: 0; margin: 0;">
-              <a class="text-light" href="{% url 'logout' %}">Logout</a>
+            <li class="text-light lst-style" id="username">
+              {% trans 'hello' %} {{ user.username }},{% trans 'welcome' %}
+            </li>
+            <li class="lst-style">&nbsp; | &nbsp;</li>
+            <li class="lst-style">
+              <a class="text-light" href="{% url 'logout' %}">{% trans 'logout' %}</a>
             </li>
           {% else %}
-            <li class="" style="list-style: none; padding: 0; margin: 0;">
+            <li class="lst-style">
               <a class="text-light" href="{% url 'login' %}">{% trans 'login' %}</a>
             </li>
-            <li style="list-style: none; padding: 0; margin: 0;">&nbsp; | &nbsp;</li>
-            <li class="" style="list-style: none; padding: 0; margin: 0;">
+            <li class="lst-style">&nbsp; | &nbsp;</li>
+            <li class="lst-style">
               <a class="text-light" href="{% url 'register' %}">{% trans 'Register' %}</a>
             </li>
           {% endif %}
@@ -129,7 +142,6 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     {% bootstrap_javascript %}
 
@@ -144,6 +156,8 @@
           console.log(usernameElement.innerText)
         }
       })
+  
+
     </script>
     {% block scripts %}
 
