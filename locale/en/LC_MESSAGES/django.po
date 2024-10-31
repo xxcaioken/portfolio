@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-30 02:38-0300\n"
+"POT-Creation-Date: 2024-10-31 05:12-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,101 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\templates\base.html:81
+#: .\about\templates\about\index.html:36 .\about\templates\about\index.html:94
+msgid "about_title_function"
+msgstr "Full Stack Developer"
+
+#: .\about\templates\about\index.html:37
+msgid "about_description"
+msgstr ""
+"I am a Full Stack Developer passionate about technology and software "
+"development since childhood. I completed my degree in Systems Analysis and "
+"Development, and I have experience in technologies such as React.js and ."
+"NET, working in agile environments and collaborating with multidisciplinary "
+"teams. Additionally, my experience has allowed me to expand my fluency in "
+"English and broaden my perspective on applying technology in different "
+"cultural contexts. I am always seeking new challenges and opportunities to "
+"grow as a developer, pursuing skill-building courses and exploring new "
+"technologies and methodologies."
+
+#: .\about\templates\about\index.html:64
+msgid "about_language_title"
+msgstr "Languages"
+
+#: .\about\templates\about\index.html:67
+msgid "about_language_description_title"
+msgstr "English"
+
+#: .\about\templates\about\index.html:68
+msgid "about_language_description_descriptions"
+msgstr "B2 - Upper-Intermediate"
+
+#: .\about\templates\about\index.html:75
+msgid "about_hability_title"
+msgstr "Skills"
+
+#: .\about\templates\about\index.html:89
+msgid "about_professional_experience"
+msgstr "Experiência Profissional"
+
+#: .\about\templates\about\index.html:94
+msgid "about_professional_experience_first_date"
+msgstr "Apr 2022 - Jul 2024"
+
+#: .\about\templates\about\index.html:97
+msgid "about_professional_experience_first_description"
+msgstr ""
+"As a Junior Full Stack Developer, I was responsible for developing and "
+"maintaining a web application using <strong>React.js</strong> and <strong>."
+"NET</strong>. I implemented new features and performance improvements in "
+"both frontend and backend, in addition to integrating third-party APIs to "
+"expand system functionality."
+
+#: .\about\templates\about\index.html:104
+msgid "about_education_title"
+msgstr "Education"
+
+#: .\about\templates\about\index.html:106
+msgid "about_education_title_first_title"
+msgstr "Technical Course in Systems Development"
+
+#: .\about\templates\about\index.html:108
+msgid "about_education_title_first_date"
+msgstr "Jan 2019 - Dec 2021"
+
+#: .\about\templates\about\index.html:109
+msgid "about_education_title_first_description"
+msgstr ""
+"The technical course in Systems Development, integrated with high school, "
+"was crucial for my career as a developer. It provided me with practical "
+"knowledge in programming and systems analysis, as well as essential skills "
+"like teamwork and problem-solving, preparing me for market challenges."
+
+#: .\about\templates\about\index.html:111
+msgid "about_education_title_second_title"
+msgstr "Analysis and Systems Development"
+
+#: .\about\templates\about\index.html:113
+msgid "about_education_title_second_date"
+msgstr "Jan 2022 - Present"
+
+#: .\about\templates\about\index.html:114
+msgid "about_education_title_second_description"
+msgstr ""
+"This course provides an in-depth understanding of advanced programming "
+"concepts, software architecture, and requirements analysis, enabling the "
+"development of more robust and efficient solutions. The training has also "
+"enriched my knowledge of new technologies and methodologies, including agile "
+"development and DevOps practices. The practical approach of the course, with "
+"projects and case studies, strengthens my skills in solving real-world "
+"problems and teamwork, keeping me updated on market trends and new "
+"technologies."
+
+#: .\templates\base.html:108
+msgid "login"
+msgstr "Login"
+
+#: .\templates\base.html:112
 msgid "Register"
 msgstr "Register"
 
