@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-31 07:17-0300\n"
+"POT-Creation-Date: 2024-10-31 08:30-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,17 +109,61 @@ msgstr ""
 "trabalhar em equipe, mantendo-me atualizado sobre as tendências do mercado e "
 "as novas tecnologias."
 
-#: .\accounts\templates\accounts\login.html:19
-#: .\accounts\templates\accounts\login.html:33 .\templates\base.html:117
+#: .\accounts\templates\accounts\login.html:20
+#: .\accounts\templates\accounts\login.html:34 .\templates\base.html:123
 msgid "login"
 msgstr "Entrar"
 
-#: .\accounts\templates\accounts\login.html:40
+#: .\accounts\templates\accounts\login.html:41
 msgid "create_account"
 msgstr "Criar uma Conta"
 
+#: .\accounts\templates\accounts\register.html:30
+msgid "full_name"
+msgstr "Nome Completo:"
+
+#: .\accounts\templates\accounts\register.html:33
+msgid "likendin_url"
+msgstr "Url do linkedin:"
+
+#: .\accounts\templates\accounts\register.html:39
+msgid "password"
+msgstr "Senha:"
+
+#: .\accounts\templates\accounts\register.html:41
+msgid "repassword"
+msgstr "Confirme a senha:"
+
+#: .\accounts\templates\accounts\register.html:45
+msgid "show_pass"
+msgstr "Confirme a senha:"
+
+#: .\accounts\templates\accounts\register.html:52
+msgid "rule1"
+msgstr "A senha deve ter pelo menos 8 caracteres."
+
+#: .\accounts\templates\accounts\register.html:53
+msgid "rule2"
+msgstr "Deve conter letras maiúsculas e minúsculas."
+
+#: .\accounts\templates\accounts\register.html:54
+msgid "rule3"
+msgstr "Deve conter pelo menos um número."
+
+#: .\accounts\templates\accounts\register.html:55
+msgid "rule4"
+msgstr "Deve conter ao menos um caractere especial (por exemplo, @, #, $)."
+
+#: .\accounts\templates\accounts\register.html:60
+msgid "registere"
+msgstr "registrar"
+
+#: .\accounts\templates\accounts\register.html:67
+msgid "already_have"
+msgstr "Já possui uma conta? Faça login."
+
 #: .\feedback_suggestions\templates\feedback_suggestions\index.html:126
-#: .\templates\base.html:83
+#: .\templates\base.html:89
 msgid "feedback_title"
 msgstr "Feedback e Sugestões"
 
@@ -159,47 +203,47 @@ msgstr "Salvar"
 msgid "feedback_form_login_or_create"
 msgstr "Fazer Login ou Criar Conta"
 
-#: .\templates\base.html:70
+#: .\templates\base.html:77
 msgid "home"
 msgstr "Início"
 
-#: .\templates\base.html:73
+#: .\templates\base.html:80
 msgid "about"
 msgstr "Sobre mim"
 
-#: .\templates\base.html:76
+#: .\templates\base.html:83
 msgid "projects"
 msgstr "Projetos"
 
-#: .\templates\base.html:79
+#: .\templates\base.html:85
 msgid "crypto"
 msgstr "Preço para crypto"
 
-#: .\templates\base.html:87
+#: .\templates\base.html:93
 msgid "language"
 msgstr "Idioma"
 
-#: .\templates\base.html:95
+#: .\templates\base.html:99
 msgid "english"
 msgstr "Inglês"
 
-#: .\templates\base.html:102
+#: .\templates\base.html:106
 msgid "pt-br"
 msgstr "PT-BR"
 
-#: .\templates\base.html:109
+#: .\templates\base.html:115
 msgid "hello"
 msgstr "Olá"
 
-#: .\templates\base.html:110
+#: .\templates\base.html:115
 msgid "welcome"
 msgstr "Seja bem-vindo!"
 
-#: .\templates\base.html:113
+#: .\templates\base.html:119
 msgid "logout"
 msgstr "Sair"
 
-#: .\templates\base.html:121
+#: .\templates\base.html:127
 msgid "Register"
 msgstr "Registre-se"
 

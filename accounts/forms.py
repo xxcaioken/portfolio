@@ -1,6 +1,8 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import get_user_model
+from django.core.exceptions import ValidationError
+import re
 
 User = get_user_model()
         
@@ -56,7 +58,7 @@ class CustomUserCreationForm(UserCreationForm):
     )
     linkedin_url = forms.URLField(
         label='LinkedIn Profile URL',
-        widget=forms.URLInput(attrs={'class': 'form-control'})
+        widget=forms.URLInput(attrs={'class': 'form-control', 'placeholder': 'https://www.linkedin.com/in/username', 'type': 'url'})
     )
 
     class Meta:

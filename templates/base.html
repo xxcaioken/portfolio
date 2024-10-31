@@ -112,7 +112,7 @@
 
           {% if user.is_authenticated %}
             <li class="text-light lst-style" id="username">
-              {% trans 'hello' %} {{ user.username }},{% trans 'welcome' %}
+              {% trans 'hello' %}  {{ user.username }},&nbsp;{% trans 'welcome' %}
             </li>
             <li class="lst-style">&nbsp; | &nbsp;</li>
             <li class="lst-style">
