@@ -85,18 +85,49 @@
         justify-content: center;
         background-color: rgba(0, 0, 0, 0.2);
     }
-    
+    .parent_container{
+      background-color: #e5dac8; 
+      max-width: 95%;
+       margin: auto;
+       height: 90.5vh;
+    }
+    .color{
+      color: #008e72
+    }
+    .feedback_description{
+      font-size: 1.5rem; color: black
+    }
+    .bold{
+      font-weight: bold;
+    }
+    .form-button-feedback{
+      display: none;
+    }
+    .form_save-button{
+      background-color: #008e72; 
+      color: white;
+    }
+    .Feedback_carousel{
+      min-width: -webkit-fill-available;
+    }
+    .Feedback_carousel_row{
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .arrows-alignment{
+      align-self: center
+    }
   </style>
 {% endblock %}
 
 {% block content %}
-  <div class="d-flex flex-column justify-content-center align-items-center p-3 my-3" style="background-color: #e5dac8; max-width: 95%; margin: auto; height: 90.5vh;">
+  <div class="parent_container d-flex flex-column justify-content-center align-items-center p-3 my-3">
     <div class="head-area">
-      <h1 class="feedback-title mb-2" style="color: #008e72">{% trans "feedback_title" %}</h1>
+      <h1 class="feedback-title mb-2 color">{% trans "feedback_title" %}</h1>
       <p class="feedback-text mb-2">{% trans "feedback_description" %}</p>
       <div>
-        <i id="feedback-icon" class="bi bi-info-circle feedback-icon d-md-none mr-2" style="font-size: 1.5rem; color: black;" data-toggle="tooltip" title="{% trans "feedback_description" %}"></i>
-        <button class="add-feedback-button" data-toggle="modal" data-target="#exampleModalCenter">{% trans "feedback_add_feedback" %} <span style="font-weight: bold;">+</span></button>
+        <i id="feedback-icon" class="bi bi-info-circle feedback-icon d-md-none mr-2 feedback_description" data-toggle="tooltip" title="{% trans "feedback_description" %}"></i>
+        <button class="add-feedback-button bold" data-toggle="modal" data-target="#exampleModalCenter">{% trans "feedback_add_feedback" %} <span>+</span></button>
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -116,7 +147,7 @@
                     {% csrf_token %}
                     {{ form.non_field_errors }}
                     {{ form.as_p }}
-                    <button type="submit" class="btn btn-primary" style="display: none;">Enviar</button>
+                    <button type="submit" class="btn" >Enviar</button>
                   </form>
                 {% else %}
                   <p>{% trans "feedback_form_warning" %}</p>
@@ -125,9 +156,9 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">{% trans "feedback_form_close" %}</button>
                 {% if user.is_authenticated %}
-                  <button type="button" class="btn btn-primary" id="submitFeedback">{% trans "feedback_form_save" %}</button>
+                  <button type="button"  class="btn form_save-button" id="submitFeedback">{% trans "feedback_form_save" %}</button>
                 {% else %}
-                  <a href="{% url 'login' %}" class="btn btn-primary">{% trans "feedback_form_login_or_create" %}</a>
+                  <a href="{% url 'login' %}" class="btn form_save-button">{% trans "feedback_form_login_or_create" %}</a>
                 {% endif %}
               </div>
             </div>
@@ -136,11 +167,11 @@
       </div>
     </div>
 
-    <div id="feedbackCarousel" class="carousel slide mb-3" data-ride="carousel" data-interval="false" style="min-width: -webkit-fill-available;">
+    <div id="feedbackCarousel" class="carousel slide mb-3 Feedback_carousel" data-ride="carousel" data-interval="false" >
       <div class="carousel-inner">
         {% for feedback_batch in feedback_batches %}
           <div class="carousel-item {% if forloop.first %}active{% endif %}">
-            <div class="row" style="justify-content: space-evenly;align-items: center;">
+            <div class="row Feedback_carousel_row" >
               {% for feedback in feedback_batch %}
                 <div class="align-items-stretch">
                   <div class="card shadow-sm w-100">
@@ -157,11 +188,11 @@
           </div>
         {% endfor %}
       </div>
-      <a class="carousel-control-prev" href="#feedbackCarousel" role="button" data-slide="prev" aria-label="Previous feedback" style="align-self: center">
+      <a class="carousel-control-prev arrows-alignment" href="#feedbackCarousel" role="button" data-slide="prev" aria-label="Previous feedback">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <a class="carousel-control-next" href="#feedbackCarousel" role="button" data-slide="next" aria-label="Next feedback" style="align-self: center">
+      <a class="carousel-control-next arrows-alignment" href="#feedbackCarousel" role="button" data-slide="next" aria-label="Next feedback">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
