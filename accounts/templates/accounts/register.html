@@ -4,9 +4,21 @@
   Registrar - Portfolio Caio Kormives
 {% endblock %}
 
+{% block style %}
+<style>
+.{}
+.container_parent{background-color: #e5dac8; max-width: 95%; margin: auto; height: 90.5vh;   color: #008e72;}
+.card_shdw{max-width: 400px; width: 100%;}
+.otln{ outline: none;}
+.fnt{font-size: 0.9em;}
+.grn{color: #008e72}
+.register_bttn{background-color: white;color:#008e72; border:1px solid #008e72}
+</style>
+{% endblock %}
+
 {% block content %}
-  <div class="d-flex flex-column justify-content-center align-items-center p-3 my-3" style="background-color: #e5dac8; max-width: 95%; margin: auto; height: 90.5vh;   color: #008e72;" data-aos="fade-up" data-aos-delay="100">
-    <div class="card shadow" style="max-width: 400px; width: 100%;">
+  <div class="container_parent d-flex flex-column justify-content-center align-items-center p-3 my-3" data-aos="fade-up" data-aos-delay="100">
+    <div class="card shadow card_shdw" >
       <div class="card-header text-center">
         <h3>Criar Conta</h3>
       </div>
@@ -27,14 +39,14 @@
             {{ form.password1 }}</div>
           <div class="mb-3">{{ form.password2.label_tag }}
             {{ form.password2 }}</div>
-	    <div class="d-flex justify-content-end p-1" style=" outline: none;">
-		<button class="btn" type="button" onclick="togglePassword()" style="outline: none;">
+	    <div class="d-flex justify-content-end p-1 otln">
+		<button class="btn otln" type="button" onclick="togglePassword()" >
 		    Show password&nbsp;&nbsp;&nbsp;<i class="bi bi-eye" id="eye"></i>
 		</button>
 	    </div>
 	    
 		
-	<div class="form-text mt-2" style="font-size: 0.9em;">
+	<div class="form-text mt-2" style="">
             <ul>
               <li>A senha deve ter pelo menos 8 caracteres.</li>
               <li>Deve conter letras maiúsculas e minúsculas.</li>
@@ -44,14 +56,14 @@
           </div>
 
           <div class="d-flex justify-content-center">
-            <button type="submit" class="btn mt-3" style="  background-color: white;color:#008e72; border:1px solid #008e72">Registrar</button>
+            <button type="submit" class="btn mt-3 register_bttn" >Registrar</button>
           </div>
         </form>
         {% if form.non_field_errors %}
           <div class="alert alert-danger mt-3">{{ form.non_field_errors }}</div>
         {% endif %}
         <div class="text-center mt-4">
-          <a href="{% url 'login' %}" style="color: #008e72;">Já possui uma conta? Faça login.</a>
+          <a href="{% url 'login' %}" class="grn">Já possui uma conta? Faça login.</a>
         </div>
       </div>
     </div>
