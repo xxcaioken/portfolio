@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-31 05:12-0300\n"
+"POT-Creation-Date: 2024-10-31 05:49-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -108,11 +108,50 @@ msgstr ""
 "problems and teamwork, keeping me updated on market trends and new "
 "technologies."
 
-#: .\templates\base.html:108
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:94
+msgid "feedback_title"
+msgstr "Feedback & Suggestions"
+
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:95
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:97
+msgid "feedback_description"
+msgstr ""
+"This is the ideal space to leave your feedback! If we have worked together, "
+"share your experiences and insights about my work. If we haven't met yet, "
+"feel free to suggest studies, improvements to the portfolio, or even propose "
+"a project idea. Feel free to contribute and help in my development!"
+
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:98
+msgid "feedback_add_feedback"
+msgstr "Add Feedback"
+
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:105
+msgid "feedback_form_head"
+msgstr "Add Feedback or Suggestion"
+
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:121
+msgid "feedback_form_warning"
+msgstr ""
+"This function is only available for logged-in users. Please log in or create "
+"an account to leave feedback."
+
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:125
+msgid "feedback_form_close"
+msgstr "Close"
+
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:127
+msgid "feedback_form_save"
+msgstr "Save"
+
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:129
+msgid "feedback_form_login_or_create"
+msgstr "Login or Create Account"
+
+#: .\templates\base.html:110
 msgid "login"
 msgstr "Login"
 
-#: .\templates\base.html:112
+#: .\templates\base.html:114
 msgid "Register"
 msgstr "Register"
 
