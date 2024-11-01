@@ -67,12 +67,18 @@
       }
       .lan-space {
       }
+      .mb2{
+        
+      }
       @media (max-width: 992px) {
         .dsp-none-fro-space {
           display: none;
         }
         .lan-space {
           padding-inline: 0px;
+        }
+        .mb2{
+          margin-bottom: .5rem!important;
         }
       }
       .bttns {
@@ -119,8 +125,8 @@
         box-shadow: none;
       }
       .dropdown-item:active {
-        background-color: transparent; /* Evita que a cor de fundo mude */
-        color: grey; /* Mantém a cor do texto */
+        background-color: transparent;
+        color: grey; 
     }
       {% block style %}  {% endblock %}
 
@@ -181,7 +187,7 @@
               <a class="text-light" href="{% url 'logout' %}">{% trans 'logout' %}</a>
             </li>
           {% else %}
-            <li class="lst-style">
+            <li class="lst-style mb2">
               <a class="text-light" href="{% url 'login' %}">{% trans 'login' %}</a>
             </li>
             <li class="lst-style dsp-none-fro-space">&nbsp; | &nbsp;</li>
