@@ -52,21 +52,31 @@
 {% block content %}
   <span>
     <div class="d-flex flex-column justify-content-center align-items-center p-3 my-3" style="background-color: #e5dac8; max-width: 95%; margin: auto; height: 90.5vh;" data-aos="fade-up" data-aos-delay="100">
-      <img src="https://drive.google.com/thumbnail?id=1PEbqAIJlQ0fqyWIvpu09lMganxwwNrmw" alt="Tempo" style="max-width: 100%; height: auto;" />
-      <div class="text-center mt-3">
-        <h2 contenteditable="true" spellcheck="false">Olá, me chamo Caio!</h2>
-        <p contenteditable="true" spellcheck="false">Sou um Desenvolvedor Full Stack apaixonado por tecnologia e desenvolvimento de software desde a infância quando tive meu primeiro contato com desenvolvimento.</p>
+   
+      <div class="text-center mt-3" style="max-width: 100vh;color: #315355;">
+        <h2 contenteditable="false" class="mb-4" spellcheck="false" style="font-size: 36px;">Olá, eu sou o Caio!</h2>
+        <p contenteditable="false" class="mb-5" spellcheck="false">Sou desenvolvedor full stack com sólida experiência em React e .NET, concluindo minha formação em Análise e Desenvolvimento de Sistemas. Minha trajetória inclui projetos desafiadores em ambientes ágeis e colaborações com clientes internacionais, que aprimoraram não só minhas habilidades técnicas como também minha fluência em inglês e visão global. Estou animado para transformar ideias em soluções reais e seguir crescendo na tecnologia, sempre pronto para o próximo desafio.</p>
         <a href="{% url 'about' %}" style="
-            color: var(--default-color);
-            font-weight: 400;
-            font-size: 14px;
-            letter-spacing: 1px;
-            padding: 8px 40px;
-            border-radius: 50px;
-            text-transform: uppercase;
-            transition: 0.3s;
-            border: 2px solid color-mix(in srgb, var(--default-color), transparent 50%);
+        color: white;
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 1px;
+        padding: 8px 40px;
+        border-radius: 50px;
+        transition: 0.3s;
+        border: 2px solid color-mix(in srgb,#315355, transparent 50%);
+        background: #315355;
         ">Saber mais</a>
+        <a href="{% url 'about' %}" style="
+        color: var(--default-color);
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 1px;
+        padding: 8px 40px;
+        border-radius: 50px;
+        transition: 0.3s;
+        border: 2px solid color-mix(in srgb, #315355, transparent 50%);
+    ">python projects</a>
       </div>
       <div class="bttns position-absolute start-0 z-10 d-flex flex-column gap-2" >
         <a href="#" class="text-black bg-white p-2 rounded-circle shadow d-flex align-items-center justify-content-center mt-1"><i class="fab fa-linkedin"></i></a>
