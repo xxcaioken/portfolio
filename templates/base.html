@@ -69,6 +69,48 @@
         .dsp-none-fro-space{display: none;}
         .lan-space{padding-inline:0px;}
       }
+      .bttns{
+        left: 0; bottom: 10vh;
+      }
+      .absolute {
+        position: absolute;
+      }
+      .left-0 {
+        left: 0;
+      }
+      .top-\[50\%\] {
+        top: 50%;
+      }
+      .translate-y-\[-50\%\] {
+        --tw-translate-y: -50%;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+      }
+      .z-10 {
+        z-index: 10;
+      }
+      .flex {
+        display: flex;
+      }
+      .flex-col {
+        flex-direction: column;
+      }
+      .gap-4 {
+        gap: 16px;
+      }
+      .text-black {
+        --tw-text-opacity: 1;
+        color: rgb(0 0 0 / var(--tw-text-opacity));
+      }
+      .bg-white {
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+      }
+      .rounded-md {
+        border-radius: 18px;
+      }
+      :-moz-ui-invalid {
+        box-shadow: none;
+      }
       {% block style %}  {% endblock %}
 
     </style>
@@ -143,6 +185,16 @@
       {% block content %}
 
       {% endblock %}
+      <div class="bttns position-absolute start-0 z-10 d-flex flex-column gap-2" >
+        <a href="https://www.linkedin.com/in/caio-kormives/" class="text-black bg-white p-2 rounded-circle shadow d-flex align-items-center justify-content-center mt-1"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:cwkormives@gmail.com" class="text-black bg-white p-2 rounded-circle shadow d-flex align-items-center justify-content-center mt-1">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        </a>        
+        <a href="https://github.com/xxcaioken" class="text-black bg-white p-2 rounded-circle shadow d-flex align-items-center justify-content-center mt-1"><i class="fab fa-github"></i></a>
+        <a href="https://wa.me/5548998459412" class="text-black bg-white p-2 rounded-circle shadow d-flex align-items-center justify-content-center mt-1" target="_blank">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        </a>
+      </div>
     </main>
 
     <footer style="background-color: #e5dac8;">
