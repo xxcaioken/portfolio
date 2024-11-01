@@ -118,6 +118,10 @@
       :-moz-ui-invalid {
         box-shadow: none;
       }
+      .dropdown-item:active {
+        background-color: transparent; /* Evita que a cor de fundo mude */
+        color: grey; /* Mantém a cor do texto */
+    }
       {% block style %}  {% endblock %}
 
     </style>
