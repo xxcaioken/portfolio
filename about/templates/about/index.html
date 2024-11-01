@@ -9,17 +9,18 @@
 <style>
   .responsive-heading { font-family: serif; font-weight: bold; font-size: 7vw; }
 
-  @media (min-width: 2559px) { .responsive-heading { font-size: 6vw; } }
+  @media (max-width: 2559px) { .responsive-heading { font-size: 6vw; } }
 
-  @media (max-width: 1441px) { .responsive-heading { font-size: 8.5vw; } }
+  @media ( max-width: 1441px) { .responsive-heading { font-size: 8.5vw; } }
 
-  @media (max-width: 1025px) { .responsive-heading { font-size: 9.5vw; } }
+  @media ( max-width: 1025px) { .responsive-heading { font-size: 9.5vw; } }
 
-  @media (max-width: 900px) { .responsive-heading { font-size: 10vw; } }
+  @media ( max-width: 900px) { .responsive-heading { font-size: 10vw; } }
 
-  @media (max-width: 600px) { .responsive-heading { font-size: 12vw; } }
+  @media ( max-width: 600px) { .responsive-heading { font-size: 12vw; } }
 
-  @media (max-width: 400px) { .responsive-heading { font-size: 12vw; } }
+  @media ( max-width: 400px) { .responsive-heading { font-size: 12vw; } }
+ 
 
   .section-title { border-left: 5px solid #008e72; padding-left: 10px; }
   .parent_container{background-color: #e5dac8; max-width: 95%; margin: auto; height: auto; min-height: 90.5vh;  color: #008e72;}
@@ -34,7 +35,8 @@
   .green-clr{background: #008e72;}
   .p{padding: 1rem 0 0 1rem;}
   .exp{max-width: 66vh; min-height: 80vh; margin-inline: 3vh;}
-  @media (max-width: 600px) { .exp {margin-inline: 2vh; } }
+  @media (max-width: 600px) { .exp {margin-inline: 2vh; }  .img_col{display: none;} .rw{align-items: center;} .col-8{flex: 0 0 83.333333%;
+    max-width: 83.333333%;} }
 
   .exp_rw{min-height:30vh}
   .exp_rw_sn{min-width: -webkit-fill-available;}
@@ -104,7 +106,7 @@
         <div class="exp col-md-9 col-lg-8 rounded">
           <div class="row rounded exp_rw" >
             <div class="p-3 bg-light rounded xp_rw_sn">
-              <h4 class="font-weight-bold section-title mt-1"> {% trans 'about_professional_experience' %}</h4>
+              <h4 class="font-weight-bold section-title mt-2"> {% trans 'about_professional_experience' %}</h4>
               <p>
                 <strong>Tech6 Group Ltda</strong>
               </p>
@@ -115,21 +117,21 @@
                 {% trans 'about_professional_experience_first_description' %}
               </p>
           
-              <h4 class="font-weight-bold section-title">{% trans 'about_education_title' %}</h4>
-              <p>
+              <h4 class="font-weight-bold section-title mt-4">{% trans 'about_education_title' %}</h4>
+              <p class="mt-2">
                 <strong>{% trans 'about_education_title_first_title' %}</strong>
               </p>
               <p>SENAI - ({% trans 'about_education_title_first_date' %})</p>
               <p>{% trans 'about_education_title_first_description' %}</p>
-              <p>
+              <p class="mt-2">
                 <strong>{% trans 'about_education_title_second_title' %}</strong>
               </p>
               <p>SENAI - ({% trans 'about_education_title_second_date' %})</p>
-              <p>{% trans 'about_education_title_second_description' %}</p>
+              <p class="mb-4">{% trans 'about_education_title_second_description' %}</p>
+            </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 {% endblock %}
