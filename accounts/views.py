@@ -1,7 +1,7 @@
 from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
-from .models import LinkedInProfile 
+from .models import LinkedInProfile
 from .forms import CustomUserCreationForm, EmailAuthenticationForm
 from django.contrib.auth import login
 from django.contrib.auth import logout
@@ -24,7 +24,6 @@ class CustomLoginView(LoginView):
         return super().form_invalid(form)
 
 
-
 class RegisterView(CreateView):
     form_class = CustomUserCreationForm
     template_name = 'accounts/register.html'
@@ -34,7 +33,7 @@ class RegisterView(CreateView):
         user = form.save()
         
         if user:
-            linkedin_profile = LinkedInProfile.objects.get_or_create(user=user)
+            linkedin_profile, _ = LinkedInProfile.objects.get_or_create(user=user)
 
             linkedin_url = form.cleaned_data.get('linkedin_url')
             if linkedin_url:

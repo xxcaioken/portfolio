@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-01 04:48-0300\n"
+"POT-Creation-Date: 2024-11-01 07:06-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,7 +109,7 @@ msgstr ""
 "technologies."
 
 #: .\accounts\templates\accounts\login.html:20
-#: .\accounts\templates\accounts\login.html:34 .\templates\base.html:131
+#: .\accounts\templates\accounts\login.html:34 .\templates\base.html:181
 msgid "login"
 msgstr "Login"
 
@@ -163,7 +163,7 @@ msgid "already_have"
 msgstr "Already have an account? Log in."
 
 #: .\feedback_suggestions\templates\feedback_suggestions\index.html:124
-#: .\templates\base.html:96
+#: .\templates\base.html:145
 msgid "feedback_title"
 msgstr "Feedback & Suggestions"
 
@@ -202,47 +202,94 @@ msgstr "Save"
 msgid "feedback_form_login_or_create"
 msgstr "Login or Create Account"
 
-#: .\templates\base.html:84
-msgid "home"
-msgstr "Home"
+#: .\home\templates\home\index.html:14
+msgid "hello_iam"
+msgstr "Hello, I am"
 
-#: .\templates\base.html:87
-msgid "about"
-msgstr "About Me"
+#: .\home\templates\home\index.html:16
+msgid "home_desc"
+msgstr ""
+"I am a full stack developer with solid experience in React and .NET, "
+"completing my degree in Systems Analysis and Development. My journey "
+"includes challenging projects in agile environments and collaborations with "
+"international clients, which have enhanced not only my technical skills but "
+"also my fluency in English and global perspective. I am excited to turn "
+"ideas into real solutions and continue growing in technology, always ready "
+"for the next challenge."
 
-#: .\templates\base.html:90
+#: .\home\templates\home\index.html:29
+msgid "saber_mais"
+msgstr "Learn more"
+
+#: .\home\templates\home\index.html:39
+msgid "python_projects"
+msgstr "Python projects"
+
+#: .\projects\templates\projects\index.html:136 .\templates\base.html:139
 msgid "projects"
 msgstr "Projects"
 
-#: .\templates\base.html:92
+#: .\projects\templates\projects\index.html:143 .\templates\base.html:141
 msgid "crypto"
 msgstr "Price for Crypto"
 
-#: .\templates\base.html:101
+#: .\projects\templates\projects\index.html:145
+msgid "crypto_card_subtitle"
+msgstr "Identify the best buying moment of the day."
+
+#: .\projects\templates\projects\index.html:147
+msgid "crypto_card_desc"
+msgstr ""
+"Using artificial intelligence, this application analyzes metrics from a "
+"third-party API to predict the best buying prices for cryptocurrencies "
+"throughout the day."
+
+#: .\projects\templates\projects\index.html:153
+#: .\projects\templates\projects\index.html:159
+#: .\projects\templates\projects\index.html:167
+#: .\projects\templates\projects\index.html:173
+#: .\projects\templates\projects\index.html:179
+#: .\projects\templates\projects\index.html:185
+#: .\projects\templates\projects\index.html:193
+#: .\projects\templates\projects\index.html:199
+#: .\projects\templates\projects\index.html:205
+#: .\projects\templates\projects\index.html:211
+msgid "Coming_soon"
+msgstr "Coming soon"
+
+#: .\templates\base.html:133
+msgid "home"
+msgstr "Home"
+
+#: .\templates\base.html:136
+msgid "about"
+msgstr "About Me"
+
+#: .\templates\base.html:150
 msgid "language"
 msgstr "Language"
 
-#: .\templates\base.html:107
+#: .\templates\base.html:156
 msgid "english"
 msgstr "English"
 
-#: .\templates\base.html:114
+#: .\templates\base.html:163
 msgid "pt-br"
 msgstr "PT-BR"
 
-#: .\templates\base.html:123
+#: .\templates\base.html:173
 msgid "hello"
 msgstr "Hello"
 
-#: .\templates\base.html:123
+#: .\templates\base.html:173
 msgid "welcome"
 msgstr "Welcome!"
 
-#: .\templates\base.html:127
+#: .\templates\base.html:177
 msgid "logout"
 msgstr "Logout"
 
-#: .\templates\base.html:135
+#: .\templates\base.html:185
 msgid "Register"
 msgstr "Register"
 

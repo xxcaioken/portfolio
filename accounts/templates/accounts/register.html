@@ -6,87 +6,124 @@
 {% endblock %}
 
 {% block style %}
-<style>
-.{}
-.container_parent{background-color: #e5dac8; max-width: 95%; margin: auto; height: 90.5vh;   color: #008e72;}
-.card_shdw{max-width: 400px; width: 100%;}
-.otln{ outline: none;}
-.fnt{font-size: 0.9em;}
-.grn{color: #008e72}
-.register_bttn{background-color: white;color:#008e72; border:1px solid #008e72}
-</style>
+  <style>
+    . {
+    }
+    .container_parent {
+      background-color: #e5dac8;
+      max-width: 95%;
+      margin: auto;
+      height: 90.5vh;
+      color: #008e72;
+    }
+    .card_shdw {
+      max-width: 400px;
+      width: 100%;
+    }
+    .otln {
+      outline: none;
+    }
+    .fnt {
+      font-size: 0.9em;
+    }
+    .grn {
+      color: #008e72;
+    }
+    .register_bttn {
+      background-color: white;
+      color: #008e72;
+      border: 1px solid #008e72;
+    }
+  </style>
 {% endblock %}
 
 {% block content %}
   <div class="container_parent d-flex flex-column justify-content-center align-items-center p-3 my-3" data-aos="fade-up" data-aos-delay="100">
-    <div class="card shadow card_shdw" >
+    <div class="card shadow card_shdw">
       <div class="card-header text-center">
-        <h3>{% trans "create_account" %}</h3>
+        <h3>{% trans 'create_account' %}</h3>
       </div>
       <div class="card-body">
         <form method="post">
           {% csrf_token %}
 
-          <div class="mb-3">{% trans "full_name" %}
-            {{ form.username }}</div>
+          <div class="mb-3">
+            {% trans 'full_name' %}
+            {{ form.username }}
+          </div>
 
-          <div class="mb-3">{% trans "likendin_url" %}
-              {{ form.linkedin_url }}</div>
+          <div class="mb-3">
+            {% trans 'likendin_url' %}
+            {{ form.linkedin_url }}
+          </div>
 
           <div class="mb-3">{{ form.email.label_tag }}
-            {{ form.email }}</div>
+            {{ form.email }}
+            {% if form.email.errors %}
+              <div class="alert alert-danger">{{ form.email.errors }}</div>
+            {% endif %}
+          </div>
 
-          <div class="mb-3">{% trans "password" %}
-            {{ form.password1 }}</div>
-          <div class="mb-3">{% trans "repassword" %}
-            {{ form.password2 }}</div>
-	    <div class="d-flex justify-content-end p-1 otln">
-		<button class="btn otln" type="button" onclick="togglePassword()" >
-		    {% trans "show_pass" %}&nbsp;&nbsp;&nbsp;<i class="bi bi-eye" id="eye"></i>
-		</button>
-	    </div>
-	    
-		
-	<div class="form-text mt-2" style="">
+          <div class="mb-3">
+            {% trans 'password' %}
+            {{ form.password1 }}
+          </div>
+          <div class="mb-3">
+            {% trans 'repassword' %}
+            {{ form.password2 }}
+          </div>
+          <div class="d-flex justify-content-end p-1 otln">
+            <button class="btn otln" type="button" onclick="togglePassword()">{% trans 'show_pass' %}&nbsp;&nbsp;&nbsp;<i class="bi bi-eye" id="eye"></i></button>
+          </div>
+
+          <div class="form-text mt-2" style="">
             <ul>
-              <li>{% trans "rule1" %}</li>
-              <li>{% trans "rule2" %}</li>
-              <li>{% trans "rule3" %}</li>
-              <li>{% trans "rule4" %}</li>
+              <li>
+                {% trans 'rule1' %}
+              </li>
+              <li>
+                {% trans 'rule2' %}
+              </li>
+              <li>
+                {% trans 'rule3' %}
+              </li>
+              <li>
+                {% trans 'rule4' %}
+              </li>
             </ul>
           </div>
 
           <div class="d-flex justify-content-center">
-            <button type="submit" class="btn mt-3 register_bttn" >{% trans "registere" %}</button>
+            <button type="submit" class="btn mt-3 register_bttn">{% trans 'registere' %}</button>
           </div>
         </form>
         {% if form.non_field_errors %}
           <div class="alert alert-danger mt-3">{{ form.non_field_errors }}</div>
         {% endif %}
         <div class="text-center mt-4">
-          <a href="{% url 'login' %}" class="grn">{% trans "already_have" %}</a>
+          <a href="{% url 'login' %}" class="grn">{% trans 'already_have' %}</a>
         </div>
       </div>
     </div>
   </div>
   <script>
     function togglePassword() {
-        const passwordField = 'id_password'
+      const passwordField = 'id_password'
     
-        let icon = document.getElementById('eye')
+      let icon = document.getElementById('eye')
     
-        for (let i = 1; i <= 2; i++) {
-            let field = document.getElementById(passwordField + i)
-
-            if (field && icon) {
-                if (field.type === 'password') {
-                    field.type = 'text'
-                    icon.classList.remove('bi-eye')
-                    icon.classList.add('bi-eye-slash')
-                } else {
-                    field.type = 'password'
-                    icon.classList.remove('bi-eye-slash')
-                    icon.classList.add('bi-eye')
+      for (let i = 1; i <= 2; i++) {
+        let field = document.getElementById(passwordField + i)
+    
+        if (field && icon) {
+          if (field.type === 'password') {
+            field.type = 'text'
+            icon.classList.remove('bi-eye')
+            icon.classList.add('bi-eye-slash')
+          } else {
+            field.type = 'password'
+            icon.classList.remove('bi-eye-slash')
+            icon.classList.add('bi-eye')
           }
         }
       }

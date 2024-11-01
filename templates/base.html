@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
     {% load bootstrap4 %}
     {% bootstrap_css %}
@@ -63,14 +63,21 @@
         padding: 0;
         margin: 0;
       }
-      .dsp-none-fro-space{}
-      .lan-space{}
-      @media (max-width:992px){
-        .dsp-none-fro-space{display: none;}
-        .lan-space{padding-inline:0px;}
+      .dsp-none-fro-space {
       }
-      .bttns{
-        left: 0; bottom: 10vh;
+      .lan-space {
+      }
+      @media (max-width: 992px) {
+        .dsp-none-fro-space {
+          display: none;
+        }
+        .lan-space {
+          padding-inline: 0px;
+        }
+      }
+      .bttns {
+        left: 0;
+        bottom: 10vh;
       }
       .absolute {
         position: absolute;
@@ -138,31 +145,32 @@
               <a class="nav-link text-light" href="{% url 'feedback_suggestions' %}">{% trans 'feedback_title' %}</a>
             </li>
           </ul>
-          
+
           <li class="nav-item dropdown lst-style">
-                <a class="nav-link text-light dropdown-toggle lan-space" href="javascript:void(0);" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans "language" %}</a>
-                <div class="dropdown-menu">
-                        <a href="#">
+            <a class="nav-link text-light dropdown-toggle lan-space" href="javascript:void(0);" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans 'language' %}</a>
+            <div class="dropdown-menu">
+              <a href="#">
                 <form action="{% url 'set_language' %}" method="post">
                   {% csrf_token %}
                   <input type="hidden" name="language" value="en" />
-                  <button type="submit" class="dropdown-item">{% trans 'english' %}</button>
+                  <button type="submit" class="dropdown-item" style="color: gray;">{% trans 'english' %}</button>
                 </form>
               </a>
               <a>
                 <form action="{% url 'set_language' %}" method="post">
                   {% csrf_token %}
                   <input type="hidden" name="language" value="pt-br" />
-                  <button type="submit" class="dropdown-item">{% trans 'pt-br' %}</button>
+                  <button type="submit" class="dropdown-item" style="color: gray;">{% trans 'pt-br' %}</button>
                 </form>
               </a>
+              
             </div>
           </li>
-          <li  class="lst-style dsp-none-fro-space">| &nbsp;</li>
+          <li class="lst-style dsp-none-fro-space">| &nbsp;</li>
 
           {% if user.is_authenticated %}
             <li class="text-light lst-style dsp-none-fro-space" id="username">
-              {% trans 'hello' %}  {{ user.username }},&nbsp;{% trans 'welcome' %}
+              {% trans 'hello' %} {{ user.username }},&nbsp;{% trans 'welcome' %}
             </li>
             <li class="lst-style dsp-none-fro-space">&nbsp; | &nbsp;</li>
             <li class="lst-style">
@@ -185,15 +193,11 @@
       {% block content %}
 
       {% endblock %}
-      <div class="bttns position-absolute start-0 z-10 d-flex flex-column gap-2" >
+      <div class="bttns position-absolute start-0 z-10 d-flex flex-column gap-2">
         <a href="https://www.linkedin.com/in/caio-kormives/" class="text-black bg-white p-2 rounded-circle shadow d-flex align-items-center justify-content-center mt-1"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:cwkormives@gmail.com" class="text-black bg-white p-2 rounded-circle shadow d-flex align-items-center justify-content-center mt-1">
-          <i class="fa fa-envelope" aria-hidden="true"></i>
-        </a>        
+        <a href="mailto:cwkormives@gmail.com" class="text-black bg-white p-2 rounded-circle shadow d-flex align-items-center justify-content-center mt-1"><i class="fa fa-envelope" aria-hidden="true"></i></a>
         <a href="https://github.com/xxcaioken" class="text-black bg-white p-2 rounded-circle shadow d-flex align-items-center justify-content-center mt-1"><i class="fab fa-github"></i></a>
-        <a href="https://wa.me/5548998459412" class="text-black bg-white p-2 rounded-circle shadow d-flex align-items-center justify-content-center mt-1" target="_blank">
-          <i class="fab fa-whatsapp" aria-hidden="true"></i>
-        </a>
+        <a href="https://wa.me/5548998459412" class="text-black bg-white p-2 rounded-circle shadow d-flex align-items-center justify-content-center mt-1" target="_blank"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
       </div>
     </main>
 
@@ -202,7 +206,7 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  
+
     {% bootstrap_javascript %}
 
     <script>
@@ -216,8 +220,6 @@
           console.log(usernameElement.innerText)
         }
       })
-  
-
     </script>
     {% block scripts %}
 

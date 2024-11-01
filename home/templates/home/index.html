@@ -1,41 +1,43 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block title %}
   Home - Portfolio Caio Kormives
 {% endblock %}
 {% block style %}
-  <style>
-   
-  </style>
+  <style></style>
 {% endblock %}
 {% block content %}
   <span>
     <div class="d-flex flex-column justify-content-center align-items-center p-3 my-3" style="background-color: #e5dac8; max-width: 95%; margin: auto; height: 90.5vh;" data-aos="fade-up" data-aos-delay="100">
-   
       <div class="text-center mt-3" style="max-width: 100vh;color: #315355;">
-        <h2 contenteditable="false" class="mb-4" spellcheck="false" style="font-size: 36px;">Olá, eu sou o Caio!</h2>
-        <p contenteditable="false" class="mb-5" spellcheck="false">Sou desenvolvedor full stack com sólida experiência em React e .NET, concluindo minha formação em Análise e Desenvolvimento de Sistemas. Minha trajetória inclui projetos desafiadores em ambientes ágeis e colaborações com clientes internacionais, que aprimoraram não só minhas habilidades técnicas como também minha fluência em inglês e visão global. Estou animado para transformar ideias em soluções reais e seguir crescendo na tecnologia, sempre pronto para o próximo desafio.</p>
-        <a href="{% url 'about' %}" style="
-        color: white;
-        font-weight: 400;
-        font-size: 14px;
-        letter-spacing: 1px;
-        padding: 8px 40px;
-        border-radius: 50px;
-        transition: 0.3s;
-        border: 2px solid color-mix(in srgb,#315355, transparent 50%);
-        background: #315355;
-        ">Saber mais</a>
-        <a href="{% url 'projects' %}" style="
-        color: var(--default-color);
-        font-weight: 400;
-        font-size: 14px;
-        letter-spacing: 1px;
-        padding: 8px 40px;
-        border-radius: 50px;
-        transition: 0.3s;
-        border: 2px solid color-mix(in srgb, #315355, transparent 50%);
-    ">python projects</a>
+        <h2 contenteditable="false" class="mb-4" spellcheck="false" style="font-size: 36px;">{% trans 'hello_iam' %} Caio!</h2>
+        <p contenteditable="false" class="mb-5" spellcheck="false">
+          {% trans 'home_desc' %}
+        </p>
+        <div class="d-flex flex-column flex-sm-row justify-content-center" style="gap: 10px;">
+          <a href="{% url 'about' %}" style="
+                color: white;
+                font-weight: 400;
+                font-size: 14px;
+                letter-spacing: 1px;
+                padding: 8px 40px;
+                border-radius: 50px;
+                transition: 0.3s;
+                border: 2px solid color-mix(in srgb,#315355, transparent 50%);
+                background: #315355;
+            ">{% trans 'saber_mais' %}</a>
+          <a href="{% url 'projects' %}" style="
+                color: var(--default-color);
+                font-weight: 400;
+                font-size: 14px;
+                letter-spacing: 1px;
+                padding: 8px 40px;
+                border-radius: 50px;
+                transition: 0.3s;
+                border: 2px solid color-mix(in srgb, #315355, transparent 50%);
+            ">{% trans 'python_projects' %}</a>
+        </div>
       </div>
     </div>
   </span>
