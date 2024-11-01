@@ -5,14 +5,22 @@
   Home - Portfolio Caio Kormives
 {% endblock %}
 {% block style %}
-  <style></style>
+  <style>
+    .{}
+    .img_col{ }
+    @media (min-width: 600px) { .img_col{display: none;} }
+  
+  </style>
 {% endblock %}
 {% block content %}
   <span>
     <div class="d-flex flex-column justify-content-center align-items-center p-3 my-3" style="background-color: #e5dac8; max-width: 95%; margin: auto; height: 90.5vh;" data-aos="fade-up" data-aos-delay="100">
       <div class="text-center mt-3" style="max-width: 100vh;color: #315355;">
-        <h2 contenteditable="false" class="mb-4" spellcheck="false" style="font-size: 36px;">{% trans 'hello_iam' %} Caio!</h2>
-        <p contenteditable="false" class="mb-5" spellcheck="false">
+        <div class="img_col">
+          <img src="https://drive.google.com/thumbnail?id=1PEbqAIJlQ0fqyWIvpu09lMganxwwNrmw" alt="Profile" class="img-fluid rounded imgtg mb-3" />
+        </div>
+        <h2 contenteditable="false" class="mb-3" spellcheck="false" style="font-size: 36px;">{% trans 'hello_iam' %} Caio!</h2>
+        <p contenteditable="false" class="mb-4" spellcheck="false">
           {% trans 'home_desc' %}
         </p>
         <div class="d-flex flex-column flex-sm-row justify-content-center" style="gap: 10px;">
