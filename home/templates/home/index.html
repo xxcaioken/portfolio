@@ -1,15 +1,62 @@
 {% extends 'base.html' %}
 
-{% block title %}Home - Portfolio Caio Kormives{% endblock %}
-
+{% block title %}
+  Home - Portfolio Caio Kormives
+{% endblock %}
+{% block style %}
+  <style>
+    .absolute {
+      position: absolute;
+    }
+    .left-0 {
+      left: 0;
+    }
+    .top-\[50\%\] {
+      top: 50%;
+    }
+    .translate-y-\[-50\%\] {
+      --tw-translate-y: -50%;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+    .z-10 {
+      z-index: 10;
+    }
+    .flex {
+      display: flex;
+    }
+    .flex-col {
+      flex-direction: column;
+    }
+    .gap-4 {
+      gap: 16px;
+    }
+    .text-black {
+      --tw-text-opacity: 1;
+      color: rgb(0 0 0 / var(--tw-text-opacity));
+    }
+    .bg-white {
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    }
+    .rounded-md {
+      border-radius: 18px;
+    }
+    :-moz-ui-invalid {
+      box-shadow: none;
+    }
+    .bttns{
+      left: 0; bottom: 10vh;
+    }
+  </style>
+{% endblock %}
 {% block content %}
-<span> 
+  <span>
     <div class="d-flex flex-column justify-content-center align-items-center p-3 my-3" style="background-color: #e5dac8; max-width: 95%; margin: auto; height: 90.5vh;" data-aos="fade-up" data-aos-delay="100">
-        <img src="https://drive.google.com/thumbnail?id=1PEbqAIJlQ0fqyWIvpu09lMganxwwNrmw" alt="Tempo" style="max-width: 100%; height: auto;">
-        <div class="text-center mt-3"> <!-- Adicionei mt-3 para espaçamento entre a imagem e o texto -->
-            <h2 contenteditable="true" spellcheck="false">Olá, me chamo Caio!</h2>
-            <p contenteditable="true" spellcheck="false">Sou um Desenvolvedor Full Stack apaixonado por tecnologia e desenvolvimento de software desde a infância quando tive meu primeiro contato com desenvolvimento.</p>
-            <a href="{% url 'about' %}" style="
+      <img src="https://drive.google.com/thumbnail?id=1PEbqAIJlQ0fqyWIvpu09lMganxwwNrmw" alt="Tempo" style="max-width: 100%; height: auto;" />
+      <div class="text-center mt-3">
+        <h2 contenteditable="true" spellcheck="false">Olá, me chamo Caio!</h2>
+        <p contenteditable="true" spellcheck="false">Sou um Desenvolvedor Full Stack apaixonado por tecnologia e desenvolvimento de software desde a infância quando tive meu primeiro contato com desenvolvimento.</p>
+        <a href="{% url 'about' %}" style="
             color: var(--default-color);
             font-weight: 400;
             font-size: 14px;
@@ -20,7 +67,12 @@
             transition: 0.3s;
             border: 2px solid color-mix(in srgb, var(--default-color), transparent 50%);
         ">Saber mais</a>
-        </div>
+      </div>
+      <div class="bttns position-absolute start-0 z-10 d-flex flex-column gap-2" >
+        <a href="#" class="text-black bg-white p-2 rounded-circle shadow d-flex align-items-center justify-content-center mt-1"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="text-black bg-white p-2 rounded-circle shadow d-flex align-items-center justify-content-center mt-1"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        <a href="#" class="text-black bg-white p-2 rounded-circle shadow d-flex align-items-center justify-content-center mt-1"><i class="fab fa-github"></i></a>
+      </div>
     </div>
-</span>
+  </span>
 {% endblock %}

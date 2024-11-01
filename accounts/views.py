@@ -33,21 +33,19 @@ class RegisterView(CreateView):
     def form_valid(self, form):
         user = form.save()
         
-        if(user):
-            linkedin_profile, created = LinkedInProfile.objects.get_or_create(user=user)
+        if user:
+            linkedin_profile = LinkedInProfile.objects.get_or_create(user=user)
 
-            if created:
-                linkedin_profile.linkedin_url = form.POST.get('linkedin_url')
+            linkedin_url = form.cleaned_data.get('linkedin_url')
+            if linkedin_url:
+                linkedin_profile.linkedin_url = linkedin_url
                 linkedin_profile.save()
-            else:
-                linkedin_profile.linkedin_url = form.POST.get('linkedin_url')
-                linkedin_profile.save()
-        
+
         return super().form_valid(form)
 
     def form_invalid(self, form):
         return super().form_invalid(form)
-    
+
 def logout_view(request):
     logout(request)
     return redirect('home')
