@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-01 03:33-0300\n"
+"POT-Creation-Date: 2024-11-01 04:48-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,7 +109,7 @@ msgstr ""
 "technologies."
 
 #: .\accounts\templates\accounts\login.html:20
-#: .\accounts\templates\accounts\login.html:34 .\templates\base.html:124
+#: .\accounts\templates\accounts\login.html:34 .\templates\base.html:131
 msgid "login"
 msgstr "Login"
 
@@ -162,13 +162,13 @@ msgstr "Register"
 msgid "already_have"
 msgstr "Already have an account? Log in."
 
-#: .\feedback_suggestions\templates\feedback_suggestions\index.html:125
-#: .\templates\base.html:90
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:124
+#: .\templates\base.html:96
 msgid "feedback_title"
 msgstr "Feedback & Suggestions"
 
-#: .\feedback_suggestions\templates\feedback_suggestions\index.html:126
-#: .\feedback_suggestions\templates\feedback_suggestions\index.html:128
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:125
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:127
 msgid "feedback_description"
 msgstr ""
 "This is the ideal space to leave your feedback! If we have worked together, "
@@ -176,73 +176,73 @@ msgstr ""
 "feel free to suggest studies, improvements to the portfolio, or even propose "
 "a project idea. Feel free to contribute and help in my development!"
 
-#: .\feedback_suggestions\templates\feedback_suggestions\index.html:129
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:128
 msgid "feedback_add_feedback"
 msgstr "Add Feedback"
 
-#: .\feedback_suggestions\templates\feedback_suggestions\index.html:136
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:135
 msgid "feedback_form_head"
 msgstr "Add Feedback or Suggestion"
 
-#: .\feedback_suggestions\templates\feedback_suggestions\index.html:152
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:151
 msgid "feedback_form_warning"
 msgstr ""
 "This function is only available for logged-in users. Please log in or create "
 "an account to leave feedback."
 
-#: .\feedback_suggestions\templates\feedback_suggestions\index.html:156
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:155
 msgid "feedback_form_close"
 msgstr "Close"
 
-#: .\feedback_suggestions\templates\feedback_suggestions\index.html:158
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:157
 msgid "feedback_form_save"
 msgstr "Save"
 
-#: .\feedback_suggestions\templates\feedback_suggestions\index.html:160
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:159
 msgid "feedback_form_login_or_create"
 msgstr "Login or Create Account"
 
-#: .\templates\base.html:78
+#: .\templates\base.html:84
 msgid "home"
 msgstr "Home"
 
-#: .\templates\base.html:81
+#: .\templates\base.html:87
 msgid "about"
 msgstr "About Me"
 
-#: .\templates\base.html:84
+#: .\templates\base.html:90
 msgid "projects"
 msgstr "Projects"
 
-#: .\templates\base.html:86
+#: .\templates\base.html:92
 msgid "crypto"
 msgstr "Price for Crypto"
 
-#: .\templates\base.html:94
+#: .\templates\base.html:101
 msgid "language"
 msgstr "Language"
 
-#: .\templates\base.html:100
+#: .\templates\base.html:107
 msgid "english"
 msgstr "English"
 
-#: .\templates\base.html:107
+#: .\templates\base.html:114
 msgid "pt-br"
 msgstr "PT-BR"
 
-#: .\templates\base.html:116
+#: .\templates\base.html:123
 msgid "hello"
 msgstr "Hello"
 
-#: .\templates\base.html:116
+#: .\templates\base.html:123
 msgid "welcome"
 msgstr "Welcome!"
 
-#: .\templates\base.html:120
+#: .\templates\base.html:127
 msgid "logout"
 msgstr "Logout"
 
-#: .\templates\base.html:128
+#: .\templates\base.html:135
 msgid "Register"
 msgstr "Register"
 

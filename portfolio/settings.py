@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'crypto_prices',
     'feedback_suggestions',
     'accounts',
+    'projects',
 ]
 
 MIDDLEWARE = [
@@ -75,6 +76,8 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 LANGUAGE_CODE = 'pt-br'
 
@@ -92,10 +95,6 @@ LANGUAGES = (
 )
 
 LOCALE_PATHS = (os.path.join(BASE_DIR, 'locale/'), )
-
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
