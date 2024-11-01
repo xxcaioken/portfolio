@@ -63,6 +63,12 @@
         padding: 0;
         margin: 0;
       }
+      .dsp-none-fro-space{}
+      .lan-space{}
+      @media (max-width:992px){
+        .dsp-none-fro-space{display: none;}
+        .lan-space{padding-inline:0px;}
+      }
       {% block style %}  {% endblock %}
 
     </style>
@@ -90,8 +96,9 @@
               <a class="nav-link text-light" href="{% url 'feedback_suggestions' %}">{% trans 'feedback_title' %}</a>
             </li>
           </ul>
+          
           <li class="nav-item dropdown lst-style">
-                <a class="nav-link text-light dropdown-toggle" href="javascript:void(0);" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans "language" %}</a>
+                <a class="nav-link text-light dropdown-toggle lan-space" href="javascript:void(0);" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans "language" %}</a>
                 <div class="dropdown-menu">
                         <a href="#">
                 <form action="{% url 'set_language' %}" method="post">
@@ -109,13 +116,13 @@
               </a>
             </div>
           </li>
-          <li  class="lst-style">| &nbsp;</li>
+          <li  class="lst-style dsp-none-fro-space">| &nbsp;</li>
 
           {% if user.is_authenticated %}
-            <li class="text-light lst-style" id="username">
+            <li class="text-light lst-style dsp-none-fro-space" id="username">
               {% trans 'hello' %}  {{ user.username }},&nbsp;{% trans 'welcome' %}
             </li>
-            <li class="lst-style">&nbsp; | &nbsp;</li>
+            <li class="lst-style dsp-none-fro-space">&nbsp; | &nbsp;</li>
             <li class="lst-style">
               <a class="text-light" href="{% url 'logout' %}">{% trans 'logout' %}</a>
             </li>
@@ -123,7 +130,7 @@
             <li class="lst-style">
               <a class="text-light" href="{% url 'login' %}">{% trans 'login' %}</a>
             </li>
-            <li class="lst-style">&nbsp; | &nbsp;</li>
+            <li class="lst-style dsp-none-fro-space">&nbsp; | &nbsp;</li>
             <li class="lst-style">
               <a class="text-light" href="{% url 'register' %}">{% trans 'Register' %}</a>
             </li>
