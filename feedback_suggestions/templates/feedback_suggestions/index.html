@@ -185,7 +185,7 @@
                       <h5 class="card-title "><a href="{{ feedback.user.linkedinprofile.linkedin_url }}" class="color user_name" target="_blank">{{ feedback.user.username }}</a></h5>
                       <h6 class="card-subtitle mb-2 text-muted">{{ feedback.date|date:'F j, Y' }}</h6>
                       <h6 class="card-subtitle mb-2 text-muted">{{ feedback.type }}:</h6>
-                      <p class="card-text">{{ feedback.message }}</p>
+                      <p class="card-text" style="max-width: fit-content;">{{ feedback.message }}</p>
                     </div>
                   </div>
                 </div>
