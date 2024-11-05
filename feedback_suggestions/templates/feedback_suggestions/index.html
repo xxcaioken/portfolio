@@ -58,7 +58,7 @@
     }
     .feedback-text {
       font-family: 'Open Sans', sans-serif;
-      color: #315355;
+      color: #315355 ;
       max-width: 50%;
       margin: 0;
     }
@@ -96,7 +96,7 @@
        height: 90.5vh;
     }
     .color{
-      color: #008e72
+      color: #008e72 !important;
     }
     .feedback_description{
       font-size: 1.5rem; color: black
@@ -121,6 +121,8 @@
     .arrows-alignment{
       align-self: center
     }
+    .user_name{}
+
   </style>
 {% endblock %}
 
@@ -180,7 +182,7 @@
                 <div class="align-items-stretch">
                   <div class="card shadow-sm w-100">
                     <div class="card-body w-100">
-                      <h5 class="card-title"><a href="{{ feedback.user.linkedinprofile.linkedin_url }}" class="color" target="_blank" id="username">{{ feedback.user.username }}</a></h5>
+                      <h5 class="card-title "><a href="{{ feedback.user.linkedinprofile.linkedin_url }}" class="color user_name" target="_blank">{{ feedback.user.username }}</a></h5>
                       <h6 class="card-subtitle mb-2 text-muted">{{ feedback.date|date:'F j, Y' }}</h6>
                       <h6 class="card-subtitle mb-2 text-muted">{{ feedback.type }}:</h6>
                       <p class="card-text">{{ feedback.message }}</p>

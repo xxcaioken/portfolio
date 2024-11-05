@@ -128,6 +128,7 @@
         background-color: transparent;
         color: grey; 
     }
+    .user_name{}
       {% block style %}  {% endblock %}
 
     </style>
@@ -179,7 +180,7 @@
           <li class="lst-style dsp-none-fro-space">| &nbsp;</li>
 
           {% if user.is_authenticated %}
-            <li class="text-light lst-style dsp-none-fro-space" id="username">
+            <li class="text-light lst-style dsp-none-fro-space user_name" id="username">
               {% trans 'hello' %} {{ user.username }},&nbsp;{% trans 'welcome' %}
             </li>
             <li class="lst-style dsp-none-fro-space">&nbsp; | &nbsp;</li>
@@ -221,14 +222,15 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        let usernameElement = document.getElementById('username')
-      
-        if (usernameElement) {
+        let usernameElements = document.querySelectorAll('.user_name')
+          
+        usernameElements.forEach(function (usernameElement) {
           let username = usernameElement.innerText
           usernameElement.innerText = username.replace(/_/g, ' ')
-        }
+        })
       })
     </script>
+    
     {% block scripts %}
 
     {% endblock %}
