@@ -67,12 +67,18 @@
       }
       .lan-space {
       }
+      .mb2{
+        
+      }
       @media (max-width: 992px) {
         .dsp-none-fro-space {
           display: none;
         }
         .lan-space {
           padding-inline: 0px;
+        }
+        .mb2{
+          margin-bottom: .5rem!important;
         }
       }
       .bttns {
@@ -119,9 +125,10 @@
         box-shadow: none;
       }
       .dropdown-item:active {
-        background-color: transparent; /* Evita que a cor de fundo mude */
-        color: grey; /* Mantém a cor do texto */
+        background-color: transparent;
+        color: grey; 
     }
+    .user_name{}
       {% block style %}  {% endblock %}
 
     </style>
@@ -173,7 +180,7 @@
           <li class="lst-style dsp-none-fro-space">| &nbsp;</li>
 
           {% if user.is_authenticated %}
-            <li class="text-light lst-style dsp-none-fro-space" id="username">
+            <li class="text-light lst-style dsp-none-fro-space user_name" id="username">
               {% trans 'hello' %} {{ user.username }},&nbsp;{% trans 'welcome' %}
             </li>
             <li class="lst-style dsp-none-fro-space">&nbsp; | &nbsp;</li>
@@ -181,7 +188,7 @@
               <a class="text-light" href="{% url 'logout' %}">{% trans 'logout' %}</a>
             </li>
           {% else %}
-            <li class="lst-style">
+            <li class="lst-style mb2">
               <a class="text-light" href="{% url 'login' %}">{% trans 'login' %}</a>
             </li>
             <li class="lst-style dsp-none-fro-space">&nbsp; | &nbsp;</li>
@@ -215,16 +222,15 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        console.log('Script executado')
-        let usernameElement = document.getElementById('username')
-      
-        if (usernameElement) {
+        let usernameElements = document.querySelectorAll('.user_name')
+          
+        usernameElements.forEach(function (usernameElement) {
           let username = usernameElement.innerText
           usernameElement.innerText = username.replace(/_/g, ' ')
-          console.log(usernameElement.innerText)
-        }
+        })
       })
     </script>
+    
     {% block scripts %}
 
     {% endblock %}

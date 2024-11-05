@@ -8,20 +8,18 @@ from django.http import Http404
 def feedback(request):
     screen_width = int(request.GET.get('screen_width', 0))
     screen_height = int(request.GET.get('screen_height', 0))
-    print(f"Tamanho da tela: {screen_width}x{screen_height}")
 
     form = FeedbackForm()
     feedbacks = Feedback.objects.select_related('user__linkedinprofile').all().order_by('-date')
     
     maxPerPage = 4
-    if screen_width < 425:
+    if screen_width <= 650:
         maxPerPage = 1
-    elif 425 <= screen_width < 1440:
+    elif 650 <= screen_width < 1400:
         maxPerPage = 2
-    elif 1440 <= screen_width < 2560:
+    elif 1400 <= screen_width < 2560:
         maxPerPage = 3
-    else:
-        maxPerPage = 4
+
 
     feedback_batches = [feedbacks[i:i + maxPerPage] for i in range(0, len(feedbacks), maxPerPage)]
     

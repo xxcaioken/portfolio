@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-01 07:06-0300\n"
+"POT-Creation-Date: 2024-11-05 06:12-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\about\templates\about\index.html:54 .\about\templates\about\index.html:112
+#: .\about\templates\about\index.html:56 .\about\templates\about\index.html:114
 msgid "about_title_function"
 msgstr "Desenvolvedor Full Stack"
 
-#: .\about\templates\about\index.html:55
+#: .\about\templates\about\index.html:57
 msgid "about_description"
 msgstr ""
 "Sou um Desenvolvedor Full Stack apaixonado por tecnologia e desenvolvimento "
@@ -35,31 +35,31 @@ msgstr ""
 "desafios e oportunidades para crescer como desenvolvedor, buscando cursos "
 "capacitadores e explorando novas tecnologias e metodologias."
 
-#: .\about\templates\about\index.html:82
+#: .\about\templates\about\index.html:84
 msgid "about_language_title"
 msgstr "Idiomas"
 
-#: .\about\templates\about\index.html:85
+#: .\about\templates\about\index.html:87
 msgid "about_language_description_title"
 msgstr "Inglês"
 
-#: .\about\templates\about\index.html:86
+#: .\about\templates\about\index.html:88
 msgid "about_language_description_descriptions"
 msgstr " B2 - Intermediário Superior"
 
-#: .\about\templates\about\index.html:93
+#: .\about\templates\about\index.html:95
 msgid "about_hability_title"
 msgstr "Habilidades"
 
-#: .\about\templates\about\index.html:107
+#: .\about\templates\about\index.html:109
 msgid "about_professional_experience"
 msgstr "Experiência Profissional"
 
-#: .\about\templates\about\index.html:112
+#: .\about\templates\about\index.html:114
 msgid "about_professional_experience_first_date"
 msgstr "Abr 2022 - Jul 2024"
 
-#: .\about\templates\about\index.html:115
+#: .\about\templates\about\index.html:117
 msgid "about_professional_experience_first_description"
 msgstr ""
 "Como Desenvolvedor Full Stack Junior, fui responsável pelo desenvolvimento e "
@@ -68,19 +68,19 @@ msgstr ""
 "no frontend e backend, além de integrar APIs de terceiros para expandir a "
 "funcionalidade dos sistemas."
 
-#: .\about\templates\about\index.html:118
+#: .\about\templates\about\index.html:120
 msgid "about_education_title"
 msgstr "Formação"
 
-#: .\about\templates\about\index.html:120
+#: .\about\templates\about\index.html:122
 msgid "about_education_title_first_title"
 msgstr "Técnico em Desenvolvimento de Sistemas"
 
-#: .\about\templates\about\index.html:122
+#: .\about\templates\about\index.html:124
 msgid "about_education_title_first_date"
 msgstr "Jan 2019 - Dez 2021"
 
-#: .\about\templates\about\index.html:123
+#: .\about\templates\about\index.html:125
 msgid "about_education_title_first_description"
 msgstr ""
 "O curso técnico em Desenvolvimento de Sistemas, integrado ao ensino médio, "
@@ -89,15 +89,15 @@ msgstr ""
 "habilidades essenciais como trabalho em equipe e resolução de problemas, "
 "preparando-me para os desafios do mercado de trabalho."
 
-#: .\about\templates\about\index.html:125
-msgid "about_education_title_second_title"
-msgstr "Análise e Desenvolvimento de Sistemas"
-
 #: .\about\templates\about\index.html:127
+msgid "about_education_title_second_title"
+msgstr "Graduação em Análise e Desenvolvimento de Sistemas"
+
+#: .\about\templates\about\index.html:129
 msgid "about_education_title_second_date"
 msgstr "Jan 2022 - Atualmente"
 
-#: .\about\templates\about\index.html:128
+#: .\about\templates\about\index.html:130
 msgid "about_education_title_second_description"
 msgstr ""
 "O curso oferece um aprofundamento em conceitos avançados de programação, "
@@ -110,66 +110,79 @@ msgstr ""
 "as novas tecnologias."
 
 #: .\accounts\templates\accounts\login.html:20
-#: .\accounts\templates\accounts\login.html:34 .\templates\base.html:181
+#: .\accounts\templates\accounts\login.html:34 .\templates\base.html:191
 msgid "login"
 msgstr "Entrar"
 
 #: .\accounts\templates\accounts\login.html:41
-#: .\accounts\templates\accounts\register.html:24
+#: .\accounts\templates\accounts\register.html:102
 msgid "create_account"
 msgstr "Criar uma Conta"
 
-#: .\accounts\templates\accounts\register.html:30
+#: .\accounts\templates\accounts\register.html:109
 msgid "full_name"
 msgstr "Nome Completo:"
 
-#: .\accounts\templates\accounts\register.html:33
+#: .\accounts\templates\accounts\register.html:114
 msgid "likendin_url"
 msgstr "Url do linkedin:"
 
-#: .\accounts\templates\accounts\register.html:39
+#: .\accounts\templates\accounts\register.html:126
 msgid "password"
 msgstr "Senha:"
 
-#: .\accounts\templates\accounts\register.html:41
+#: .\accounts\templates\accounts\register.html:130
 msgid "repassword"
 msgstr "Confirme a Senha:"
 
-#: .\accounts\templates\accounts\register.html:45
+#: .\accounts\templates\accounts\register.html:134
 msgid "show_pass"
 msgstr "Confirme a Senha:"
 
-#: .\accounts\templates\accounts\register.html:52
+#: .\accounts\templates\accounts\register.html:140
+#: .\accounts\templates\accounts\register.html:161
 msgid "rule1"
 msgstr "A Senha deve ter pelo menos 8 caracteres."
 
-#: .\accounts\templates\accounts\register.html:53
+#: .\accounts\templates\accounts\register.html:143
+#: .\accounts\templates\accounts\register.html:162
 msgid "rule2"
 msgstr "Deve conter letras maiúsculas e minúsculas."
 
-#: .\accounts\templates\accounts\register.html:54
+#: .\accounts\templates\accounts\register.html:146
+#: .\accounts\templates\accounts\register.html:163
 msgid "rule3"
 msgstr "Deve conter pelo menos um número."
 
-#: .\accounts\templates\accounts\register.html:55
+#: .\accounts\templates\accounts\register.html:149
+#: .\accounts\templates\accounts\register.html:164
 msgid "rule4"
 msgstr "Deve conter ao menos um caractere especial (por exemplo, @, #, $)."
 
-#: .\accounts\templates\accounts\register.html:60
+#: .\accounts\templates\accounts\register.html:154
+msgid "password_rules"
+msgstr "Regras para Senha:"
+
+#: .\accounts\templates\accounts\register.html:167
 msgid "registere"
 msgstr "registrar"
 
-#: .\accounts\templates\accounts\register.html:67
+#: .\accounts\templates\accounts\register.html:174
 msgid "already_have"
 msgstr "Já possui uma conta? Faça login."
 
-#: .\feedback_suggestions\templates\feedback_suggestions\index.html:124
-#: .\templates\base.html:145
+#: .\crypto_prices\templates\crypto_prices\index.html:9
+#: .\projects\templates\projects\index.html:148 .\templates\base.html:151
+msgid "crypto"
+msgstr "Preço para crypto"
+
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:130
+#: .\templates\base.html:155
 msgid "feedback_title"
 msgstr "Feedback e Sugestões"
 
-#: .\feedback_suggestions\templates\feedback_suggestions\index.html:125
-#: .\feedback_suggestions\templates\feedback_suggestions\index.html:127
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:131
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:133
 msgid "feedback_description"
 msgstr ""
 "Este é o espaço ideal para deixar seu feedback! Se já trabalhamos juntos, "
@@ -178,37 +191,37 @@ msgstr ""
 "até mesmo propor uma ideia de projeto. Fique à vontade para contribuir e "
 "ajudar no meu desenvolvimento!"
 
-#: .\feedback_suggestions\templates\feedback_suggestions\index.html:128
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:134
 msgid "feedback_add_feedback"
 msgstr "Adicionar feedback"
 
-#: .\feedback_suggestions\templates\feedback_suggestions\index.html:135
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:141
 msgid "feedback_form_head"
 msgstr "Adicionar feedback ou Sugestão"
 
-#: .\feedback_suggestions\templates\feedback_suggestions\index.html:151
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:157
 msgid "feedback_form_warning"
 msgstr ""
 "Esta função está disponível apenas para usuários logados. Por favor, faça "
 "login ou crie uma conta para deixar um feedback."
 
-#: .\feedback_suggestions\templates\feedback_suggestions\index.html:155
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:161
 msgid "feedback_form_close"
 msgstr "Fechar"
 
-#: .\feedback_suggestions\templates\feedback_suggestions\index.html:157
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:163
 msgid "feedback_form_save"
 msgstr "Salvar"
 
-#: .\feedback_suggestions\templates\feedback_suggestions\index.html:159
+#: .\feedback_suggestions\templates\feedback_suggestions\index.html:165
 msgid "feedback_form_login_or_create"
 msgstr "Fazer Login ou Criar Conta"
 
-#: .\home\templates\home\index.html:14
+#: .\home\templates\home\index.html:22
 msgid "hello_iam"
 msgstr "Olá, eu sou o"
 
-#: .\home\templates\home\index.html:16
+#: .\home\templates\home\index.html:24
 msgid "home_desc"
 msgstr ""
 "Sou desenvolvedor full stack com sólida experiência em React e .NET, "
@@ -219,79 +232,80 @@ msgstr ""
 "para transformar ideias em soluções reais e seguir crescendo na tecnologia, "
 "sempre pronto para o próximo desafio."
 
-#: .\home\templates\home\index.html:29
+#: .\home\templates\home\index.html:37
 msgid "saber_mais"
 msgstr "Saber mais"
 
-#: .\home\templates\home\index.html:39
+#: .\home\templates\home\index.html:47
 msgid "python_projects"
 msgstr "projetos em python"
 
-#: .\projects\templates\projects\index.html:136 .\templates\base.html:139
+#: .\projects\templates\projects\index.html:141 .\templates\base.html:149
 msgid "projects"
 msgstr "Projetos"
 
-#: .\projects\templates\projects\index.html:143 .\templates\base.html:141
-msgid "crypto"
-msgstr "Preço para crypto"
-
-#: .\projects\templates\projects\index.html:145
+#: .\projects\templates\projects\index.html:150
 msgid "crypto_card_subtitle"
 msgstr "Identifique o melhor momento de compra no dia."
 
-#: .\projects\templates\projects\index.html:147
+#: .\projects\templates\projects\index.html:153
+#: .\projects\templates\projects\index.html:169
+#: .\projects\templates\projects\index.html:187
+#: .\projects\templates\projects\index.html:203
+#: .\projects\templates\projects\index.html:221
+#: .\projects\templates\projects\index.html:237
 msgid "crypto_card_desc"
 msgstr ""
 "Com o uso de inteligência artificial, essa aplicação analisa métricas de uma "
 "API de terceiros para prever os melhores preços de compra de criptomoedas ao "
 "longo do dia."
 
-#: .\projects\templates\projects\index.html:153
-#: .\projects\templates\projects\index.html:159
-#: .\projects\templates\projects\index.html:167
-#: .\projects\templates\projects\index.html:173
+#: .\projects\templates\projects\index.html:161
+#: .\projects\templates\projects\index.html:166
 #: .\projects\templates\projects\index.html:179
-#: .\projects\templates\projects\index.html:185
-#: .\projects\templates\projects\index.html:193
-#: .\projects\templates\projects\index.html:199
-#: .\projects\templates\projects\index.html:205
-#: .\projects\templates\projects\index.html:211
+#: .\projects\templates\projects\index.html:184
+#: .\projects\templates\projects\index.html:195
+#: .\projects\templates\projects\index.html:200
+#: .\projects\templates\projects\index.html:213
+#: .\projects\templates\projects\index.html:218
+#: .\projects\templates\projects\index.html:229
+#: .\projects\templates\projects\index.html:234
 msgid "Coming_soon"
 msgstr "Em breve"
 
-#: .\templates\base.html:133
+#: .\templates\base.html:143
 msgid "home"
 msgstr "Início"
 
-#: .\templates\base.html:136
+#: .\templates\base.html:146
 msgid "about"
 msgstr "Sobre mim"
 
-#: .\templates\base.html:150
+#: .\templates\base.html:160
 msgid "language"
 msgstr "Idioma"
 
-#: .\templates\base.html:156
+#: .\templates\base.html:166
 msgid "english"
 msgstr "Inglês"
 
-#: .\templates\base.html:163
+#: .\templates\base.html:173
 msgid "pt-br"
 msgstr "PT-BR"
 
-#: .\templates\base.html:173
+#: .\templates\base.html:183
 msgid "hello"
 msgstr "Olá"
 
-#: .\templates\base.html:173
+#: .\templates\base.html:183
 msgid "welcome"
 msgstr "Seja bem-vindo!"
 
-#: .\templates\base.html:177
+#: .\templates\base.html:187
 msgid "logout"
 msgstr "Sair"
 
-#: .\templates\base.html:185
+#: .\templates\base.html:195
 msgid "Register"
 msgstr "Registre-se"
 

@@ -20,7 +20,6 @@ class CustomLoginView(LoginView):
         return super().form_valid(form)
 
     def form_invalid(self, form):
-        print("Formulário de login inválido! Erros:", form.errors)
         return super().form_invalid(form)
 
 
