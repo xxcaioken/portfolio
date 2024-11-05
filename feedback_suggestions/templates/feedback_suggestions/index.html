@@ -180,7 +180,7 @@
                 <div class="align-items-stretch">
                   <div class="card shadow-sm w-100">
                     <div class="card-body w-100">
-                      <h5 class="card-title"><a href="{{ feedback.user.linkedinprofile.linkedin_url }}" class="color" target="_blank">{{ feedback.user.username }}</a></h5>
+                      <h5 class="card-title"><a href="{{ feedback.user.linkedinprofile.linkedin_url }}" class="color" target="_blank" id="username">{{ feedback.user.username }}</a></h5>
                       <h6 class="card-subtitle mb-2 text-muted">{{ feedback.date|date:'F j, Y' }}</h6>
                       <h6 class="card-subtitle mb-2 text-muted">{{ feedback.type }}:</h6>
                       <p class="card-text">{{ feedback.message }}</p>

@@ -13,7 +13,7 @@
       background-color: #e5dac8;
       max-width: 95%;
       margin: auto;
-      height: 90.5vh;
+      height: 91vh;
       color: #008e72;
     }
     .card_shdw {
@@ -34,6 +34,68 @@
       color: #008e72;
       border: 1px solid #008e72;
     }
+
+
+  .tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#tooltip-content {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #fff;
+  color: #008e72;
+  padding: 10px;
+  border: 1px solid #008e72;
+  border-radius: 5px;
+  display: none;
+  width: 200px;
+  z-index: 10;
+}
+.rules{
+  display: none;
+  justify-self: end;
+  color: black;
+}
+@media (max-width: 1200px) {
+  #tooltip-content {
+    display: block;
+    position: relative;
+  }
+  #rules{
+    display: none;
+  }
+  .rules{
+    display: block;
+  }
+}
+#rulesList {
+  position: absolute;
+  background-color: #fff;
+  color: #008e72;
+  padding: 10px;
+  border: 1px solid #008e72;
+  border-radius: 5px;
+  z-index: 10;
+  list-style: none;
+}
+#a {
+  margin-right: 5px;
+}
   </style>
 {% endblock %}
 
@@ -72,11 +134,11 @@
             {% trans 'repassword' %}
             {{ form.password2 }}
           </div>
-          <div class="d-flex justify-content-end p-1 otln">
+          <div class="d-flex justify-content-end p-1 otln" id="b">
             <button class="btn otln" type="button" onclick="togglePassword()">{% trans 'show_pass' %}&nbsp;&nbsp;&nbsp;<i class="bi bi-eye" id="eye"></i></button>
           </div>
 
-          <div class="form-text mt-2" style="">
+          <div class="form-text mt-2" id="rules">
             <ul>
               <li>
                 {% trans 'rule1' %}
@@ -92,7 +154,19 @@
               </li>
             </ul>
           </div>
-
+          <div class="form-text mt-2 rules" id="rulesTooltip">
+            {% trans "password_rules" %}&nbsp;
+            <button id="a" class="btn otln" onclick="toggleRulesTooltip()">
+              <i class="fa-solid fa-lock"></i>
+            </button>
+            
+          </div>
+          <ul id="rulesList" class="d-none">
+              <li>{% trans 'rule1' %}</li>
+              <li>{% trans 'rule2' %}</li>
+              <li>{% trans 'rule3' %}</li>
+              <li>{% trans 'rule4' %}</li>
+          </ul>
           <div class="d-flex justify-content-center">
             <button type="submit" class="btn mt-3 register_bttn">{% trans 'registere' %}</button>
           </div>
@@ -128,5 +202,16 @@
         }
       }
     }
+   
+    function toggleRulesTooltip() {
+      const rulesList = document.getElementById('rulesList');
+    
+      if (rulesList.classList.contains('d-none')) {
+        rulesList.classList.remove('d-none');
+      } else {
+        rulesList.classList.add('d-none');
+      }
+    }
+    
   </script>
 {% endblock %}

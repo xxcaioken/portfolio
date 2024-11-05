@@ -221,13 +221,11 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        console.log('Script executado')
         let usernameElement = document.getElementById('username')
       
         if (usernameElement) {
           let username = usernameElement.innerText
           usernameElement.innerText = username.replace(/_/g, ' ')
-          console.log(usernameElement.innerText)
         }
       })
     </script>
